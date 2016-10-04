@@ -1,0 +1,523 @@
+/* line 5, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: HelveticaCondensed;
+  src: url(../vendor/fonts/HelveticaCondensed.otf);
+}
+@font-face {
+  font-family: HelveticaLight;
+  src: url(../vendor/fonts/HelveticaLight.ttf);
+}
+@font-face {
+  font-family: HelveticaRoman;
+  src: url(../vendor/fonts/HelveticaRoman.ttf);
+}
+@font-face {
+  font-family: HelveticaBold;
+  src: url(../vendor/fonts/HelveticaBold.ttf);
+}
+@font-face {
+  font-family: PortraitCondensed;
+  src: url(../vendor/fonts/PortraitCondensed.ttc);
+}
+/* line 62, ../sass/styles.scss */
+.container {
+  background-color: #baddf1;
+}
+/* line 65, ../sass/styles.scss */
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 568px;
+  background-image: url("../vendor/img.jpg");
+  background-position: center;
+  background-size: cover;
+}
+/* line 73, ../sass/styles.scss */
+.container-header-title {
+  color: #ffffff;
+  font-family: HelveticaBold;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+/* line 81, ../sass/styles.scss */
+.container-overview {
+  max-width: 250px;
+  margin: 62px auto 10px auto;
+}
+/* line 85, ../sass/styles.scss */
+.container-overview p {
+  font-family: HelveticaBold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+/* line 91, ../sass/styles.scss */
+.container-overview p:nth-child(2) {
+  margin-top: 17px;
+}
+/* line 96, ../sass/styles.scss */
+.container-overview-person {
+  font-family: PortraitCondensed;
+}
+/* line 100, ../sass/styles.scss */
+.container-overview-portrait {
+  margin-top: 38px;
+}
+/* line 103, ../sass/styles.scss */
+.container-overview-portrait-image {
+  display: block;
+  height: 375px;
+  width: 250px;
+  margin: 0 auto;
+}
+/* line 110, ../sass/styles.scss */
+.container-overview-portrait-description {
+  margin-top: 15px;
+  font-family: HelveticaLight;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 20px;
+  text-align: center;
+}
+/* line 122, ../sass/styles.scss */
+.container-collection {
+  padding: 120px 0;
+}
+/* line 125, ../sass/styles.scss */
+.container-collection-title {
+  width: 250px;
+  margin: 0 auto 32px auto;
+  font-family: HelveticaCondensed;
+  font-size: 60px;
+  letter-spacing: 2.7px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0e0e0e;
+}
+/* line 133, ../sass/styles.scss */
+.container-collection-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 138, ../sass/styles.scss */
+.container-collection-images-image {
+  height: 270px;
+  width: 200px;
+  margin: 17px 0;
+}
+/* line 143, ../sass/styles.scss */
+.container-collection-images-image:nth-child(7), .container-collection-images-image:nth-child(8), .container-collection-images-image:nth-child(9) {
+  display: none;
+}
+/* line 150, ../sass/styles.scss */
+.container-muses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 568px;
+  background-color: #ef636e;
+}
+/* line 155, ../sass/styles.scss */
+.container-muses-title {
+  font-family: HelveticaCondensed;
+  font-size: 60px;
+  letter-spacing: 2.7px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0e0e0e;
+}
+/* line 161, ../sass/styles.scss */
+.container-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 568px;
+  background-image: url("../vendor/img.jpg");
+  background-position: center;
+  background-size: cover;
+}
+/* line 169, ../sass/styles.scss */
+.container-follow-title {
+  font-family: HelveticaCondensed;
+  font-size: 60px;
+  letter-spacing: 2.7px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+/* line 174, ../sass/styles.scss */
+.container-follow-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 95px;
+  width: 250px;
+  margin: 11px auto 0 auto;
+  box-sizing: border-box;
+  border: 7px solid #ef636e;
+  font-family: HelveticaCondensed;
+  font-size: 60px;
+  letter-spacing: 2.7px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ef636e;
+}
+/* line 186, ../sass/styles.scss */
+.container-follow-link:hover {
+  background-color: #ffffff;
+}
+/* line 192, ../sass/styles.scss */
+.container-stores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 199, ../sass/styles.scss */
+.container-stores-title {
+  width: 250px;
+  margin-bottom: 9px;
+  font-family: HelveticaCondensed;
+  font-size: 60px;
+  letter-spacing: 2.7px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0e0e0e;
+}
+/* line 207, ../sass/styles.scss */
+.container-stores-zone {
+  margin-top: 40px;
+}
+/* line 210, ../sass/styles.scss */
+.container-stores-zone-title {
+  color: #1d1d1d;
+  font-family: HelveticaBold;
+  font-size: 20px;
+  letter-spacing: .8px;
+  line-height: 24px;
+}
+/* line 218, ../sass/styles.scss */
+.container-stores-zone h6 {
+  margin-top: 18px;
+  font-family: HelveticaBold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 18px;
+}
+/* line 227, ../sass/styles.scss */
+.container-stores-zone p {
+  font-family: HelveticaLight;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 18px;
+}
+/* line 234, ../sass/styles.scss */
+.container-stores-zone a {
+  display: block;
+  color: #000000;
+  font-family: HelveticaLight;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+/* line 243, ../sass/styles.scss */
+.container-stores-zone a:nth-child(1) {
+  margin-top: 18px;
+}
+/* line 250, ../sass/styles.scss */
+.container-footer {
+  padding: 38px 0 20px 0;
+  background-image: url("../vendor/img.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 261, ../sass/styles.scss */
+.container-footer-contacts-title {
+  margin-bottom: 8px;
+  font-family: HelveticaBold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+/* line 267, ../sass/styles.scss */
+.container-footer-contacts a, .container-footer-contacts p {
+  color: #ffffff;
+  font-family: HelveticaLight;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+/* line 276, ../sass/styles.scss */
+.container-footer-subscribe {
+  margin-top: 63px;
+}
+/* line 279, ../sass/styles.scss */
+.container-footer-subscribe-title {
+  width: 225px;
+  margin: 0 auto 23px auto;
+  font-family: HelveticaBold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+/* line 286, ../sass/styles.scss */
+.container-footer-subscribe-form {
+  box-sizing: border-box;
+  height: 60px;
+  width: 277px;
+  margin: 0 auto;
+  background-color: #fdf3f3;
+  overflow: hidden;
+}
+/* line 295, ../sass/styles.scss */
+.container-footer-subscribe-form-input {
+  box-sizing: border-box;
+  width: 158px;
+  padding: 22px 0 22px 22px;
+  background-color: rgba(253, 243, 243, 0);
+  border: none;
+  color: #000000;
+  font-family: HelveticaLight;
+  font-size: 14px;
+}
+/* line 307, ../sass/styles.scss */
+.container-footer-subscribe-form-input:focus {
+  outline: none;
+}
+/* line 311, ../sass/styles.scss */
+.container-footer-subscribe-form-input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #000000;
+}
+/* line 314, ../sass/styles.scss */
+.container-footer-subscribe-form-input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000000;
+}
+/* line 317, ../sass/styles.scss */
+.container-footer-subscribe-form-input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000000;
+}
+/* line 320, ../sass/styles.scss */
+.container-footer-subscribe-form-input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000000;
+}
+/* line 325, ../sass/styles.scss */
+.container-footer-subscribe-form-button {
+  box-sizing: border-box;
+  height: 60px;
+  width: 115px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(253, 243, 243, 0);
+  border: none;
+  font-family: HelveticaBold;
+  font-size: 16px;
+  letter-spacing: .9px;
+}
+/* line 339, ../sass/styles.scss */
+.container-footer-subscribe-form-button:focus {
+  outline: none;
+}
+/* line 346, ../sass/styles.scss */
+.container-footer-follow {
+  margin-top: 66px;
+}
+/* line 349, ../sass/styles.scss */
+.container-footer-follow-title {
+  font-family: HelveticaBold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+/* line 353, ../sass/styles.scss */
+.container-footer-follow-blocks {
+  width: 268px;
+  margin: 13px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 360, ../sass/styles.scss */
+.container-footer-follow-blocks-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 48px;
+  width: 134px;
+  border: 2px solid #b4b4b4;
+  font-family: HelveticaBold;
+  font-size: 14px;
+  letter-spacing: .9px;
+}
+/* line 373, ../sass/styles.scss */
+.container-footer-follow-blocks-block:nth-child(2) {
+  border-left: none;
+}
+/* line 377, ../sass/styles.scss */
+.container-footer-follow-blocks-block:nth-child(3) {
+  border-top: none;
+}
+/* line 384, ../sass/styles.scss */
+.container-footer-copy {
+  width: 225px;
+  margin: 71px auto 0 auto;
+  font-family: HelveticaBold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 16px;
+  opacity: .36;
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  /* line 400, ../sass/styles.scss */
+  .container-header {
+    height: 708px;
+  }
+  /* line 403, ../sass/styles.scss */
+  .container-header-title {
+    font-size: 72px;
+  }
+  /* line 408, ../sass/styles.scss */
+  .container-overview {
+    max-width: 770px;
+    margin-top: 145px;
+  }
+  /* line 412, ../sass/styles.scss */
+  .container-overview p {
+    font-family: HelveticaBold;
+    font-size: 36px;
+    letter-spacing: 2px;
+    line-height: 42px;
+  }
+  /* line 418, ../sass/styles.scss */
+  .container-overview p:nth-child(2) {
+    margin-top: 30px;
+  }
+  /* line 423, ../sass/styles.scss */
+  .container-overview-portrait {
+    width: 360px;
+    margin: 60px auto 0 auto;
+  }
+  /* line 427, ../sass/styles.scss */
+  .container-overview-portrait-image {
+    height: 434px;
+    width: 100%;
+  }
+  /* line 432, ../sass/styles.scss */
+  .container-overview-portrait-description {
+    width: 200px;
+    margin-top: 7px;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    text-align: left;
+  }
+  /* line 443, ../sass/styles.scss */
+  .container-collection {
+    padding-top: 199px;
+  }
+  /* line 446, ../sass/styles.scss */
+  .container-collection-title {
+    width: 100%;
+    margin-bottom: 70px;
+    color: #232323;
+    font-family: HelveticaCondensed;
+    font-size: 90px;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  /* line 453, ../sass/styles.scss */
+  .container-collection-images {
+    flex-wrap: wrap;
+    height: 912px;
+  }
+  /* line 458, ../sass/styles.scss */
+  .container-collection-images-image:nth-child(7), .container-collection-images-image:nth-child(8), .container-collection-images-image:nth-child(9) {
+    display: inherit;
+  }
+}

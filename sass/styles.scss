@@ -1,0 +1,465 @@
+@import "compass/reset";
+
+// Fonts
+@font-face { font-family: HelveticaCondensed; src: url(../vendor/fonts/HelveticaCondensed.otf); }
+@font-face { font-family: HelveticaLight; src: url(../vendor/fonts/HelveticaLight.ttf); }
+@font-face { font-family: HelveticaRoman; src: url(../vendor/fonts/HelveticaRoman.ttf); }
+@font-face { font-family: HelveticaBold; src: url(../vendor/fonts/HelveticaBold.ttf); }
+@font-face { font-family: PortraitCondensed; src: url(../vendor/fonts/PortraitCondensed.ttc); }
+
+// Media queries breakpoints
+$mobile: 425px;
+$tablet: 1024px;
+
+// Color palette
+$light: #ffffff;
+$dark:  #000000;
+$blue:  #baddf1;
+$rose:  #ef636e;
+
+// Special colors
+$backgroundColor: #3b3b3b;
+$formBg: #fdf3f3;
+$socialBorder: #b4b4b4;
+$zoneTitle: #1d1d1d;
+
+$mobileDarkTitle: #0e0e0e;
+$tabletDarkTitle: #232323;
+
+// Mixins
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin mobile-title {
+  font-family: HelveticaCondensed;
+  font-size: 60px;
+  letter-spacing: 2.7px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin mobile-footer-title {
+  font-family: HelveticaBold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+@mixin tablet-title {
+  font-family: HelveticaCondensed;
+  font-size: 90px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// Styles
+.container {
+  background-color: $blue;
+
+  &-header {
+    @include center;
+    height: 568px;
+
+    background-image: url('../vendor/img.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &-title {
+      color: $light;
+      font-family: HelveticaBold;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+  }
+
+  &-overview {
+    max-width: 250px;
+    margin: 62px auto 10px auto;
+
+    p {
+      font-family: HelveticaBold;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 25px;
+
+      &:nth-child(2) {
+        margin-top: 17px;
+      }
+    }
+
+    &-person {
+      font-family: PortraitCondensed;
+    }
+
+    &-portrait {
+      margin-top: 38px;
+
+      &-image {
+        display: block;
+        height: 375px;
+        width: 250px;
+        margin: 0 auto;
+      }
+
+      &-description {
+        margin-top: 15px;
+
+        font-family: HelveticaLight;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-collection {
+    padding: 120px 0;
+
+    &-title {
+      width: 250px;
+      margin: 0 auto 32px auto;
+
+      @include mobile-title;
+      color: $mobileDarkTitle;
+    }
+
+    &-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-image {
+        height: 270px;
+        width: 200px;
+        margin: 17px 0;
+
+        &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-muses {
+    @include center;
+    height: 568px;
+    background-color: $rose;
+
+    &-title {
+      @include mobile-title;
+      color: $mobileDarkTitle;
+    }
+  }
+
+  &-follow {
+    @include center;
+    height: 568px;
+
+    background-image: url('../vendor/img.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &-title {
+      @include mobile-title;
+      color: $light;
+    }
+
+    &-link {
+      @include center;
+      height: 95px;
+      width: 250px;
+      margin: 11px auto 0 auto;
+
+      box-sizing: border-box;
+      border: 7px solid $rose;
+
+      @include mobile-title;
+      color: $rose;
+
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+
+  &-stores {
+    @include center;
+    padding: 70px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    &-title {
+      width: 250px;
+      margin-bottom: 9px;
+
+      @include mobile-title;
+      color: $mobileDarkTitle;
+    }
+
+    &-zone {
+      margin-top: 40px;
+
+      &-title {
+        color: $zoneTitle;
+        font-family: HelveticaBold;
+        font-size: 20px;
+        letter-spacing: .8px;
+        line-height: 24px;
+      }
+
+      h6 {
+        margin-top: 18px;
+
+        font-family: HelveticaBold;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 18px;
+      }
+
+      p {
+        font-family: HelveticaLight;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 18px;
+      }
+
+      a {
+        display: block;
+
+        color: $dark;
+        font-family: HelveticaLight;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 20px;
+
+        &:nth-child(1) {
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    padding: 38px 0 20px 0;
+    background-image: url('../vendor/img.jpg');
+    background-position: center;
+    background-size: cover;
+
+    color: $light;
+    text-align: center;
+    text-transform: uppercase;
+
+    &-contacts {
+      &-title {
+        margin-bottom: 8px;
+
+        @include mobile-footer-title;
+      }
+
+      a, p {
+        color: $light;
+        font-family: HelveticaLight;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 20px;
+      }
+    }
+
+    &-subscribe {
+      margin-top: 63px;
+
+      &-title {
+        width: 225px;
+        margin: 0 auto 23px auto;
+
+        @include mobile-footer-title;
+      }
+
+      &-form {
+        box-sizing: border-box;
+        height: 60px;
+        width: 277px;
+        margin: 0 auto;
+
+        background-color: $formBg;
+        overflow: hidden;
+
+        &-input {
+          box-sizing: border-box;
+          width: 158px;
+          padding: 22px 0 22px 22px;
+
+          background-color: rgba(253,243,243,0);
+          border: none;
+
+          color: $dark;
+          font-family: HelveticaLight;
+          font-size: 14px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $dark;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: $dark;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: $dark;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: $dark;
+          }
+        }
+
+        &-button {
+          box-sizing: border-box;
+          height: 60px;
+          width: 115px;
+          margin: 0;
+          padding: 0;
+
+          background-color: rgba(253,243,243,0);
+          border: none;
+
+          font-family: HelveticaBold;
+          font-size: 16px;
+          letter-spacing: .9px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &-follow {
+      margin-top: 66px;
+
+      &-title {
+        @include mobile-footer-title;
+      }
+
+      &-blocks {
+        width: 268px;
+        margin: 13px auto 0 auto;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        &-block {
+          @include center;
+
+          box-sizing: border-box;
+          height: 48px;
+          width: 134px;
+
+          border: 2px solid $socialBorder;
+
+          font-family: HelveticaBold;
+          font-size: 14px;
+          letter-spacing: .9px;
+
+          &:nth-child(2) {
+            border-left: none;
+          }
+
+          &:nth-child(3) {
+            border-top: none;
+          }
+        }
+      }
+    }
+
+    &-copy {
+      width: 225px;
+      margin: 71px auto 0 auto;
+
+      font-family: HelveticaBold;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 16px;
+
+      opacity: .36;
+    }
+  }
+}
+
+@media screen and (min-width: $mobile + 1px) and (max-width: $tablet) {
+  .container {
+    &-header {
+      height: 708px;
+
+      &-title {
+        font-size: 72px;
+      }
+    }
+
+    &-overview {
+      max-width: 770px;
+      margin-top: 145px;
+
+      p {
+        font-family: HelveticaBold;
+        font-size: 36px;
+        letter-spacing: 2px;
+        line-height: 42px;
+
+        &:nth-child(2) {
+          margin-top: 30px;
+        }
+      }
+
+      &-portrait {
+        width: 360px;
+        margin: 60px auto 0 auto;
+
+        &-image {
+          height: 434px;
+          width: 100%;
+        }
+
+        &-description {
+          width: 200px;
+          margin-top: 7px;
+
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          text-align: left;
+        }
+      }
+    }
+
+    &-collection {
+      padding-top: 199px;
+
+      &-title {
+        width: 100%;
+        margin-bottom: 70px;
+        color: $tabletDarkTitle;
+        @include tablet-title;
+      }
+
+      &-images {
+        flex-wrap: wrap;
+        height: 912px;
+
+        &-image {
+          &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+            display: inherit;
+          }
+        }
+      }
+    }
+  }
+}
