@@ -18,7 +18,7 @@ $blue  : #baddf1;
 $rose  : #ef636e;
 
 // Special colors
-$desktopBg    : #3b3b3b;
+$bodyBg       : #3b3b3b;
 $formBg       : #fdf3f3;
 $socialBorder : #b4b4b4;
 $zoneTitle    : #1d1d1d;
@@ -59,6 +59,10 @@ $darkTitle       : #232323;
 }
 
 // Styles
+body {
+  background-color: $bodyBg;
+}
+
 .container {
   background-color: $blue;
 
@@ -647,7 +651,22 @@ $darkTitle       : #232323;
 @media screen and (min-width: $l-tablet + 1px) {
   .container {
     position: relative;
-    background-color: $desktopBg;
+    background-color: rgba(0,0,0,0);
+
+    &-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
 
     &-header {
       height: 934px;
