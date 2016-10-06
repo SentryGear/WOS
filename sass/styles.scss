@@ -8,8 +8,10 @@
 @font-face { font-family: PortraitCondensed; src: url(../vendor/fonts/PortraitCondensed.ttc); }
 
 // Media queries breakpoints
-$s-tablet : 768px;
-$l-tablet : 1024px;
+$s-tablet  : 768px;
+$l-tablet  : 1024px;
+$s-desktop : 1280px;
+$l-desktop : 1680px;
 
 // Color palette
 $light : #ffffff;
@@ -68,17 +70,18 @@ body {
 
   &-header {
     @include center;
-    height: 568px;
+    height: 100vh;
 
     background-image: url('../vendor/images/bg_photo.jpg');
-    background-position-x: -104%;
-    background-size: 315%;
+    background-position-x: -383px;
 
     &-title {
-      color: $light;
-      font-family: HelveticaBold;
-      font-size: 36px;
-      text-transform: uppercase;
+      height: 100%;
+      width: 100%;
+      background-image: url('../vendor/images/logo.svg');
+      background-size: 75vw;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 
@@ -108,7 +111,7 @@ body {
 
       &-image {
         display: block;
-        height: 357px;
+        height: 350px;
         width: 250px;
         margin: 0 auto;
 
@@ -161,7 +164,7 @@ body {
 
   &-muses {
     @include center;
-    height: 568px;
+    height: 100vh;
     background-color: $rose;
 
     &-title {
@@ -172,11 +175,10 @@ body {
 
   &-follow {
     @include center;
-    height: 568px;
+    height: 100vh;
 
     background-image: url('../vendor/images/bg_photo.jpg');
-    background-position-x: -128%;
-    background-size: 315%;
+    background-position-x: -220px;
 
     &-title {
       @include mobile-title;
@@ -263,8 +265,6 @@ body {
   &-footer {
     padding: 38px 0 20px 0;
     background-image: url('../vendor/images/bg_photo.jpg');
-    background-position: center;
-    background-size: cover;
 
     color: $light;
     text-align: center;
@@ -275,6 +275,9 @@ body {
     }
 
     &-contacts {
+      width: 250px;
+      margin: 0 auto;
+
       &-title {
         margin-bottom: 8px;
 
@@ -412,16 +415,14 @@ body {
   }
 }
 
-@media screen and (min-width: $s-tablet) and (max-width: $l-tablet) {
+@media screen and (min-width: $s-tablet) and (max-width: $s-desktop - 1px) {
   .container {
     &-header {
-      height: 708px;
-
       background-position: center;
       background-size: cover;
 
       &-title {
-        font-size: 92px;
+        background-size: 60vw;
       }
     }
 
@@ -504,11 +505,9 @@ body {
 
     &-follow {
       height: auto;
-      padding: 124px 0 120px 0;
+      padding: 120px 0;
 
-      background-position-x: center;
-      background-position-y: 0px;
-      background-size: cover;
+      background-position-x: 0px;
 
       &-title {
         @include title;
@@ -563,9 +562,7 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
 
-      background-position-x: center;
-      background-position-y: 0px;
-      background-size: cover;
+      background-position-x: 0px;
 
       & > div {
         margin-top: 40px;
@@ -577,6 +574,7 @@ body {
 
       &-contacts {
         width: 260px;
+        margin: 0;
 
         text-align: left;
 
@@ -648,7 +646,7 @@ body {
   }
 }
 
-@media screen and (min-width: $l-tablet + 1px) {
+@media screen and (min-width: $s-desktop) {
   .container {
     position: relative;
     background-color: rgba(0,0,0,0);
@@ -669,11 +667,10 @@ body {
     }
 
     &-header {
-      height: 934px;
       background: none;
 
       &-title {
-        font-size: 92px;
+        background-size: 50vw;
       }
     }
 
@@ -822,6 +819,8 @@ body {
       background: none;
 
       &-contacts {
+        margin: 0;
+        
         text-align: left;
 
         &-title {
@@ -872,4 +871,38 @@ body {
       }
     }
   }
+}
+
+@media screen and (min-width: $s-desktop) and (max-width: $l-desktop - 1px) {
+  .container {
+    &-overview {
+      padding: 100px 50px 300px 100px;
+
+      &-text {
+        p {
+          font-size: 32px;
+          line-height: 1.25em;
+          letter-spacing: 1.25px;
+
+          &:nth-child(2) {
+            margin-top: .1em;
+          }
+        }
+      }
+
+
+      &-portrait {
+        margin: 0 0 0 50px;
+
+        &-image {
+          height: 350px;
+          width: 250px;
+
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
 }
