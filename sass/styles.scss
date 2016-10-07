@@ -74,12 +74,6 @@ body {
 .container {
   background-color: $blue;
 
-  &-animation {
-    &-portrait {
-      display: none;
-    }
-  }
-
   &-header {
     @include center;
     height: 100vh;
@@ -121,27 +115,33 @@ body {
     &-portrait {
       margin-top: 38px;
 
-      &-image {
-        display: block;
-        height: 350px;
-        width: 250px;
-        margin: 0 auto;
-
-        background-blend-mode: multiply;
-        background-color: $blue;
-        background-image: url('../vendor/images/designer.jpg');
-        background-position-x: -42px;
-        background-size: 130%;
+      &-fake {
+        display: none
       }
 
-      &-description {
-        margin-top: 15px;
+      &-movable {
+        &-image {
+          display: block;
+          height: 350px;
+          width: 250px;
+          margin: 0 auto;
 
-        font-family: HelveticaLight;
-        font-size: 14px;
-        letter-spacing: 1.4px;
-        line-height: 20px;
-        text-align: center;
+          background-blend-mode: multiply;
+          background-color: $blue;
+          background-image: url('../vendor/images/designer.jpg');
+          background-position-x: -42px;
+          background-size: 130%;
+        }
+
+        &-description {
+          margin-top: 15px;
+
+          font-family: HelveticaLight;
+          font-size: 14px;
+          letter-spacing: 1.4px;
+          line-height: 20px;
+          text-align: center;
+        }
       }
     }
   }
@@ -459,22 +459,24 @@ body {
         width: 360px;
         margin: 60px auto 0 auto;
 
-        &-image {
-          height: 434px;
-          width: 100%;
+        &-movable {
+          &-image {
+            height: 434px;
+            width: 100%;
 
-          background-blend-mode: normal;
-          background-position: center;
-          background-size: cover;
-        }
+            background-blend-mode: normal;
+            background-position: center;
+            background-size: cover;
+          }
 
-        &-description {
-          width: 200px;
-          margin-top: 7px;
+          &-description {
+            width: 200px;
+            margin-top: 7px;
 
-          font-size: 16px;
-          letter-spacing: 1.6px;
-          text-align: left;
+            font-size: 16px;
+            letter-spacing: 1.6px;
+            text-align: left;
+          }
         }
       }
     }
@@ -665,13 +667,7 @@ body {
 
     &-animation {
       &-portrait {
-        position: fixed;
-        right: 0px;
-        top: 50vh;
-        -ms-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
+
 
         &-image {
           height: 434px;
@@ -706,9 +702,6 @@ body {
       width: auto;
       height: auto;
       z-index: -2;
-      -ms-transform: translateX(-50%) translateY(-50%);
-      -moz-transform: translateX(-50%) translateY(-50%);
-      -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
     }
 
@@ -750,7 +743,6 @@ body {
       }
 
       &-portrait {
-        visibility: hidden;
         margin: 0 0 0 110px;
         padding-top: 40%;
 
@@ -758,22 +750,38 @@ body {
         flex-direction: column;
         justify-content: flex-end;
 
-        &-image {
-          height: 434px;
+        &-fake {
+          height: 486px;
           width: 360px;
-
-          background-position: center;
-          background-size: cover;
+          background-color: rgba(0,0,0,.5);
+          display: block;
+          visibility: hidden;
         }
 
-        &-description {
-          width: 200px;
-          margin-top: 12px;
+        &-movable {
+          visibility: hidden;
+          position: fixed;
+          right: 0px;
+          top: 50vh;
+          transform: translateY(-50%);
 
-          font-size: 16px;
-          letter-spacing: 1.6px;
-          line-height: 20px;
-          text-align: left;
+          &-image {
+            height: 434px;
+            width: 360px;
+
+            background-position: center;
+            background-size: cover;
+          }
+
+          &-description {
+            width: 200px;
+            margin-top: 12px;
+
+            font-size: 16px;
+            letter-spacing: 1.6px;
+            line-height: 20px;
+            text-align: left;
+          }
         }
       }
     }
@@ -952,24 +960,22 @@ body {
 
 @media screen and (min-width: $s-desktop) and (max-width: $l-desktop - 1px) {
   .container {
-    &-animation {
-      &-portrait {
-        &-image {
-          height: 350px;
-          width: 250px;
-        }
-      }
-    }
-
     &-overview {
       padding: 100px 50px 100px 100px;
 
       &-portrait {
         margin: 0 0 0 50px;
 
-        &-image {
-          height: 350px;
+        &-fake {
+          height: 402px;
           width: 250px;
+        }
+
+        &-movable {
+          &-image {
+            height: 350px;
+            width: 250px;
+          }
         }
       }
     }

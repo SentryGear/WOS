@@ -20,11 +20,7 @@ function renderVideo() {
   document.getElementById('container').appendChild(elVideo);
 }
 
-
 if (window.innerWidth >= 1280) {
-  // UNCOMMENT WHEN PROD
-  renderVideo();
-
   function isSmallDesktop() {
     if (window.innerWidth >= 1280 && window.innerWidth < 1680) {
       return true;
@@ -33,31 +29,33 @@ if (window.innerWidth >= 1280) {
     }
   }
 
+  var body = document.body,
+      html = document.documentElement;
+
+  var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
   var overview = document.getElementById('container-overview'),
       overviewHeight = parseInt(window.getComputedStyle(overview).getPropertyValue('height')),
       overviewPaddingTop = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-top')),
       overviewPaddingBottom = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-bottom'));
 
-  var portraitImage = document.getElementById('container-animation-portrait-image'),
+  var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
       portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
 
   var portraitHeight = portraitImageHeight + 12 + 40;
 
-  var portraitStartPosX;
-  var portraitEndPosX;
-
-  var portraitEndPosY;
+  var portraitStartPosX, portraitEndPosX, portraitEndPosY;
 
   if (isSmallDesktop()) {
     portraitStartPosX = -250;
     portraitEndPosX = 50;
 
-    portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3 - 20;
+    portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3;
   } else {
     portraitStartPosX = -360;
     portraitEndPosX = 70;
 
-    portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3 + 20;
+    portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3 + 40;
   }
 
   var choreographer = new Choreographer({
@@ -80,27 +78,41 @@ if (window.innerWidth >= 1280) {
         unit: 'vw'
       },
       {
-        range: [window.innerHeight*1.5, portraitEndPosY],
-        selector: '.container-animation-portrait',
-        type: 'change',
-        style: 'display',
-        to: 'block'
-      },
-      {
-        range: [portraitEndPosY, portraitEndPosY*2],
-        selector: '.container-overview-portrait',
+        range: [window.innerHeight*1.5, height],
+        selector: '.container-overview-portrait-movable',
         type: 'change',
         style: 'visibility',
         to: 'visible'
       },
       {
         range: [window.innerHeight*1.5, window.innerHeight * 1.5 + overviewPaddingTop + portraitHeight / 2],
-        selector: '.container-animation-portrait',
+        selector: '.container-overview-portrait-movable',
         type: 'scale',
         style: 'right',
         from: portraitStartPosX,
         to: portraitEndPosX,
         unit: 'px'
+      },
+      {
+        range: [portraitEndPosY, height],
+        selector: '.container-overview-portrait-fake',
+        type: 'change',
+        style: 'display',
+        to: 'none'
+      },
+      {
+        range: [portraitEndPosY, height],
+        selector: '.container-overview-portrait-movable',
+        type: 'change',
+        style: 'position',
+        to: 'inherit'
+      },
+      {
+        range: [portraitEndPosY, height],
+        selector: '.container-overview-portrait-movable',
+        type: 'change',
+        style: 'transform',
+        to: 'none'
       }
     ]
   })
@@ -119,4 +131,6 @@ if (window.innerWidth >= 1280) {
       document.getElementById('container-header-title').setAttributeNode(className);
     }
   });
+
+  renderVideo();
 }
