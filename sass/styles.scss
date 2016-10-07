@@ -11,6 +11,7 @@
 $s-tablet  : 768px;
 $l-tablet  : 1024px;
 $s-desktop : 1280px;
+$m-desktop : 1440px;
 $l-desktop : 1680px;
 
 // Color palette
@@ -60,6 +61,11 @@ $darkTitle       : #232323;
   text-transform: uppercase;
 }
 
+// Reusable classes
+.hidden {
+  visibility: hidden;
+}
+
 // Styles
 body {
   background-color: $bodyBg;
@@ -67,6 +73,12 @@ body {
 
 .container {
   background-color: $blue;
+
+  &-animation {
+    &-portrait {
+      display: none;
+    }
+  }
 
   &-header {
     @include center;
@@ -163,9 +175,9 @@ body {
   }
 
   &-muses {
-    @include center;
     height: 100vh;
     background-color: $rose;
+    overflow: hidden;
 
     &-title {
       @include mobile-title;
@@ -651,6 +663,40 @@ body {
     position: relative;
     background-color: rgba(0,0,0,0);
 
+    &-animation {
+      &-portrait {
+        position: fixed;
+        right: 0px;
+        top: 50vh;
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        &-image {
+          height: 434px;
+          width: 360px;
+
+          background-blend-mode: multiply;
+          background-color: $blue;
+          background-image: url('../vendor/images/designer.jpg');
+          background-position: center;
+          background-size: cover;
+        }
+
+        &-description {
+          width: 200px;
+          margin-top: 12px;
+
+          font-family: HelveticaLight;
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          line-height: 20px;
+          text-align: left;
+        }
+      }
+    }
+
     &-video {
       position: fixed;
       top: 50%;
@@ -659,7 +705,7 @@ body {
       min-height: 100%;
       width: auto;
       height: auto;
-      z-index: -1;
+      z-index: -2;
       -ms-transform: translateX(-50%) translateY(-50%);
       -moz-transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translateX(-50%) translateY(-50%);
@@ -670,21 +716,24 @@ body {
       background: none;
 
       &-title {
+        z-index: -1;
+        position: fixed;
         background-size: 50vw;
       }
     }
 
     &-overview {
+      z-index: 2;
+      overflow: hidden;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
 
       width: 80%;
       max-width: none;
-      margin: 0;
+      margin: 100vh 0 0 20%;
       box-sizing: border-box;
-      margin-left: 20%;
-      padding: 145px 70px 345px 145px;
+      padding: 145px 70px 145px 145px;
 
       background-color: $blue;
 
@@ -701,7 +750,13 @@ body {
       }
 
       &-portrait {
+        visibility: hidden;
         margin: 0 0 0 110px;
+        padding-top: 40%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
 
         &-image {
           height: 434px;
@@ -709,6 +764,16 @@ body {
 
           background-position: center;
           background-size: cover;
+        }
+
+        &-description {
+          width: 200px;
+          margin-top: 12px;
+
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          line-height: 20px;
+          text-align: left;
         }
       }
     }
@@ -748,6 +813,18 @@ body {
       &-title {
         color: $darkTitle;
         @include title;
+      }
+
+      &-slider {
+        height: 65%;
+        margin-top: 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        & > img {
+          filter: grayscale(100%);
+        }
       }
     }
 
@@ -820,7 +897,7 @@ body {
 
       &-contacts {
         margin: 0;
-        
+
         text-align: left;
 
         &-title {
@@ -875,9 +952,33 @@ body {
 
 @media screen and (min-width: $s-desktop) and (max-width: $l-desktop - 1px) {
   .container {
-    &-overview {
-      padding: 100px 50px 300px 100px;
+    &-animation {
+      &-portrait {
+        &-image {
+          height: 350px;
+          width: 250px;
+        }
+      }
+    }
 
+    &-overview {
+      padding: 100px 50px 100px 100px;
+
+      &-portrait {
+        margin: 0 0 0 50px;
+
+        &-image {
+          height: 350px;
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $s-desktop) and (max-width: $m-desktop - 1px) {
+  .container {
+    &-overview {
       &-text {
         p {
           font-size: 32px;
@@ -890,19 +991,19 @@ body {
         }
       }
 
-
       &-portrait {
-        margin: 0 0 0 50px;
-
-        &-image {
-          height: 350px;
-          width: 250px;
-
-          background-position: center;
-          background-size: cover;
-        }
+        padding-top: 50%;
       }
     }
   }
+}
 
+@media screen and (min-width: $m-desktop) and (max-width: $l-desktop - 1px) {
+  .container {
+    &-overview {
+      &-portrait {
+        padding-top: 47.5%;
+      }
+    }
+  }
 }
