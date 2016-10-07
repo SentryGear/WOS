@@ -36,8 +36,7 @@ if (window.innerWidth >= 1280) {
 
   var overview = document.getElementById('container-overview'),
       overviewHeight = parseInt(window.getComputedStyle(overview).getPropertyValue('height')),
-      overviewPaddingTop = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-top')),
-      overviewPaddingBottom = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-bottom'));
+      overviewPaddingTop = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-top'));
 
   var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
       portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
@@ -58,8 +57,13 @@ if (window.innerWidth >= 1280) {
     portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3 + 40;
   }
 
+  var pointStartCollection = window.innerHeight * 1.5 + overviewHeight,
+      pointEndCollection = pointStartCollection + window.innerHeight / 4 + 82.5;
+
   var choreographer = new Choreographer({
     animations: [
+
+      // Header
       {
         range: [window.innerHeight, window.innerHeight * 1.75],
         selector: '.container-header-title',
@@ -77,6 +81,15 @@ if (window.innerWidth >= 1280) {
         to: 40,
         unit: 'vw'
       },
+      {
+        range: [window.innerHeight * 1.75, height],
+        selector: '.container-header-title',
+        type: 'change',
+        style: 'visibility',
+        to: 'hidden'
+      },
+
+      // Portrait
       {
         range: [window.innerHeight*1.5, height],
         selector: '.container-overview-portrait-movable',
@@ -113,24 +126,41 @@ if (window.innerWidth >= 1280) {
         type: 'change',
         style: 'transform',
         to: 'none'
+      },
+
+      // Collection
+      {
+        range: [pointStartCollection, pointEndCollection],
+        selector: '.container-collection',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
+      },
+      {
+        range: [pointStartCollection, pointEndCollection],
+        selector: '.container-collection',
+        type: 'scale',
+        style: 'transform:scale',
+        from: .9,
+        to: 1
+      },
+      {
+        range: [pointStartCollection, pointEndCollection],
+        selector: '.container-collection',
+        type: 'scale',
+        style: 'top',
+        from: -165 * 2,
+        to: 0,
+        unit: 'px'
       }
+
     ]
   })
 
   window.addEventListener('scroll', function() {
     choreographer.runAnimationsAt(window.pageYOffset);
-
-    var hiddenCN = document.createAttribute('class');
-    hiddenCN.value = 'hidden';
-
-    if (window.pageYOffset >= window.innerHeight*1.75) {
-      document.getElementById('container-header-title').setAttributeNode(hiddenCN);
-    } else {
-      var className = document.createAttribute('class');
-      className.value = 'container-header-title';
-      document.getElementById('container-header-title').setAttributeNode(className);
-    }
   });
 
-  renderVideo();
+  // renderVideo();
 }
