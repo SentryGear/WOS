@@ -38,12 +38,14 @@ if (window.innerWidth >= 1280) {
       overviewHeight = parseInt(window.getComputedStyle(overview).getPropertyValue('height')),
       overviewPaddingTop = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-top'));
 
+  var collection = document.getElementById('container-collection'),
+      collectionHeight = parseInt(window.getComputedStyle(collection).getPropertyValue('height'));
+
   var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
       portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
 
-  var portraitHeight = portraitImageHeight + 12 + 40;
-
-  var portraitStartPosX, portraitEndPosX, portraitEndPosY;
+  var portraitHeight = portraitImageHeight + 12 + 40,
+      portraitStartPosX, portraitEndPosX, portraitEndPosY;
 
   if (isSmallDesktop()) {
     portraitStartPosX = -250;
@@ -59,6 +61,9 @@ if (window.innerWidth >= 1280) {
 
   var pointStartCollection = window.innerHeight * 1.5 + overviewHeight,
       pointEndCollection = pointStartCollection + window.innerHeight / 4 + 82.5;
+
+  var pointStartMuses = window.innerHeight + overviewHeight + collectionHeight,
+      pointEndMuses = pointStartMuses + window.innerHeight * .75;
 
   var choreographer = new Choreographer({
     animations: [
@@ -153,6 +158,16 @@ if (window.innerWidth >= 1280) {
         from: -165 * 2,
         to: 0,
         unit: 'px'
+      },
+
+      // Muses
+      {
+        range: [pointStartMuses, pointEndMuses],
+        selector: '.container-muses',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
       }
 
     ]
@@ -162,5 +177,5 @@ if (window.innerWidth >= 1280) {
     choreographer.runAnimationsAt(window.pageYOffset);
   });
 
-  // renderVideo();
+  renderVideo();
 }

@@ -810,7 +810,7 @@ body {
   }
   /* line 785, ../sass/styles.scss */
   .container-collection {
-    z-index: -1;
+    box-sizing: border-box;
     padding: 165px 0;
     position: relative;
   }
