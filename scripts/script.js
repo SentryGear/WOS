@@ -38,8 +38,15 @@ if (window.innerWidth >= 1280) {
       overviewHeight = parseInt(window.getComputedStyle(overview).getPropertyValue('height')),
       overviewPaddingTop = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-top'));
 
+      var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
+          portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
+
   var collection = document.getElementById('container-collection'),
-      collectionHeight = parseInt(window.getComputedStyle(collection).getPropertyValue('height'));
+      collectionHeight = parseInt(window.getComputedStyle(collection).getPropertyValue('height')),
+      collectionPaddingTop = parseInt(window.getComputedStyle(collection).getPropertyValue('padding-top'));
+
+      var collectionTitle = document.getElementById('container-collection-title'),
+          collectionTitleHeight = parseInt(window.getComputedStyle(collectionTitle).getPropertyValue('height'));
 
   var muses = document.getElementById('container-muses'),
       musesHeight = parseInt(window.getComputedStyle(muses).getPropertyValue('height'));
@@ -48,9 +55,6 @@ if (window.innerWidth >= 1280) {
       followHeight = parseInt(window.getComputedStyle(follow).getPropertyValue('height')),
       followPaddingTop = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-top')),
       followPaddingBottom = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-bottom'));
-
-  var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
-      portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
 
   var portraitHeight = portraitImageHeight + 12 + 40,
       portraitStartPosX, portraitEndPosX, portraitEndPosY;
@@ -67,13 +71,14 @@ if (window.innerWidth >= 1280) {
     portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3 + 40;
   }
 
-  var pointStartCollection = window.innerHeight * 1.5 + overviewHeight,
-      pointEndCollection = pointStartCollection + window.innerHeight / 4 + 82.5;
+  var pointStartCollection = window.innerHeight * 1.5 + overviewHeight - collectionTitleHeight / 2,
+      pointEndCollection = pointStartCollection + collectionPaddingTop + collectionTitleHeight;
 
   var pointStartMuses = window.innerHeight + overviewHeight + collectionHeight,
       pointEndMuses = pointStartMuses + window.innerHeight * .75;
 
-  var pointStartFollow = window.innerHeight * 1.5 + overviewHeight + collectionHeight + musesHeight - followHeight / 2,
+  var pointStartFollow =
+        window.innerHeight * 1.5 + overviewHeight + collectionHeight + musesHeight - followHeight / 2,
       pointEndFollow = pointStartFollow + followPaddingTop + followHeight;
 
   var choreographer = new Choreographer({
@@ -166,7 +171,7 @@ if (window.innerWidth >= 1280) {
         selector: '.container-collection',
         type: 'scale',
         style: 'top',
-        from: -165 * 2,
+        from: -(collectionPaddingTop + collectionTitleHeight) * 1.25,
         to: 0,
         unit: 'px'
       },
@@ -206,6 +211,13 @@ if (window.innerWidth >= 1280) {
         style: 'transform:scale',
         from: .9,
         to: 1
+      },
+      {
+        range: [pointEndFollow, height],
+        selector: '.container-follow',
+        type: 'change',
+        style: 'z-index',
+        to: 1
       }
 
     ]
@@ -215,5 +227,5 @@ if (window.innerWidth >= 1280) {
     choreographer.runAnimationsAt(window.pageYOffset);
   });
 
-  // renderVideo();
+  renderVideo();
 }
