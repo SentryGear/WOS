@@ -813,6 +813,8 @@ body {
     }
 
     &-muses {
+      z-index: 1;
+      box-sizing: border-box;
       height: auto;
       padding: 100px 0 140px 0;
 
@@ -835,8 +837,10 @@ body {
     }
 
     &-follow {
+      z-index: -1;
       height: auto;
       padding: 225px 0 325px 0;
+      position: relative;
 
       display: flex;
       flex-direction: row;

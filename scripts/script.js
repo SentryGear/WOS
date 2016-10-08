@@ -41,6 +41,14 @@ if (window.innerWidth >= 1280) {
   var collection = document.getElementById('container-collection'),
       collectionHeight = parseInt(window.getComputedStyle(collection).getPropertyValue('height'));
 
+  var muses = document.getElementById('container-muses'),
+      musesHeight = parseInt(window.getComputedStyle(muses).getPropertyValue('height'));
+
+  var follow = document.getElementById('container-follow'),
+      followHeight = parseInt(window.getComputedStyle(follow).getPropertyValue('height')),
+      followPaddingTop = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-top')),
+      followPaddingBottom = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-bottom'));
+
   var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
       portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
 
@@ -64,6 +72,9 @@ if (window.innerWidth >= 1280) {
 
   var pointStartMuses = window.innerHeight + overviewHeight + collectionHeight,
       pointEndMuses = pointStartMuses + window.innerHeight * .75;
+
+  var pointStartFollow = window.innerHeight * 1.5 + overviewHeight + collectionHeight + musesHeight - followHeight / 2,
+      pointEndFollow = pointStartFollow + followPaddingTop + followHeight;
 
   var choreographer = new Choreographer({
     animations: [
@@ -168,6 +179,33 @@ if (window.innerWidth >= 1280) {
         style: 'opacity',
         from: 0,
         to: 1
+      },
+
+      // Follow
+      {
+        range: [pointStartFollow, pointEndFollow],
+        selector: '.container-follow',
+        type: 'scale',
+        style: 'top',
+        from: -(followPaddingTop + followHeight),
+        to: 0,
+        unit: 'px'
+      },
+      {
+        range: [pointStartFollow, pointEndFollow],
+        selector: '.container-follow',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
+      },
+      {
+        range: [pointStartFollow, pointEndFollow],
+        selector: '.container-follow',
+        type: 'scale',
+        style: 'transform:scale',
+        from: .9,
+        to: 1
       }
 
     ]
@@ -177,5 +215,5 @@ if (window.innerWidth >= 1280) {
     choreographer.runAnimationsAt(window.pageYOffset);
   });
 
-  renderVideo();
+  // renderVideo();
 }
