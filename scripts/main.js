@@ -1,24 +1,12 @@
-function renderVideo() {
-  var elVideo = document.createElement('video');
-  var attrClass = document.createAttribute('class');
-  var attrAutoplay = document.createAttribute('autoplay');
-  var attrLoop = document.createAttribute('loop');
-
-  attrClass.value = 'container-video';
-  elVideo.setAttributeNode(attrClass);
-  elVideo.setAttributeNode(attrAutoplay);
-  elVideo.setAttributeNode(attrLoop);
-
-  var elSource = document.createElement('source');
-  var attrSrc = document.createAttribute('src');
-
-  attrSrc.value = './vendor/videos/wos-video.mov';
-  elSource.setAttributeNode(attrSrc);
-
-  elVideo.appendChild(elSource)
-
-  document.getElementById('container').appendChild(elVideo);
-}
+$(document).ready(function(){
+  $('#slider').slick({
+    arrows: false,
+    centerMode: true,
+    focusOnSelect: true,
+    infinite: true,
+    variableWidth: true
+  });
+});
 
 var musesHeight = 900;
 
@@ -242,5 +230,27 @@ if (window.innerWidth >= 1280) {
     choreographer.runAnimationsAt(window.pageYOffset);
   });
 
-  // renderVideo();
+  function renderVideo() {
+    var elVideo = document.createElement('video');
+    var attrClass = document.createAttribute('class');
+    var attrAutoplay = document.createAttribute('autoplay');
+    var attrLoop = document.createAttribute('loop');
+
+    attrClass.value = 'container-video';
+    elVideo.setAttributeNode(attrClass);
+    elVideo.setAttributeNode(attrAutoplay);
+    elVideo.setAttributeNode(attrLoop);
+
+    var elSource = document.createElement('source');
+    var attrSrc = document.createAttribute('src');
+
+    attrSrc.value = './vendor/videos/wos-video.mov';
+    elSource.setAttributeNode(attrSrc);
+
+    elVideo.appendChild(elSource)
+
+    document.getElementById('container').appendChild(elVideo);
+  }
+
+  renderVideo();
 }
