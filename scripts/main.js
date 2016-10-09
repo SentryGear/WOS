@@ -27,6 +27,30 @@ if (window.innerWidth >= 1440) {
 }
 
 if (window.innerWidth >= 1280) {
+  function renderVideo() {
+    var elVideo = document.createElement('video');
+    var attrClass = document.createAttribute('class');
+    var attrAutoplay = document.createAttribute('autoplay');
+    var attrLoop = document.createAttribute('loop');
+
+    attrClass.value = 'container-video';
+    elVideo.setAttributeNode(attrClass);
+    elVideo.setAttributeNode(attrAutoplay);
+    elVideo.setAttributeNode(attrLoop);
+
+    var elSource = document.createElement('source');
+    var attrSrc = document.createAttribute('src');
+
+    attrSrc.value = './vendor/videos/wos-video.mov';
+    elSource.setAttributeNode(attrSrc);
+
+    elVideo.appendChild(elSource)
+
+    document.getElementById('container').appendChild(elVideo);
+  }
+
+  renderVideo();
+
   function isSmallDesktop() {
     if (window.innerWidth >= 1280 && window.innerWidth < 1680) {
       return true;
@@ -221,6 +245,14 @@ if (window.innerWidth >= 1280) {
         type: 'change',
         style: 'z-index',
         to: 1
+      },
+
+      {
+        range: [0, 236],
+        selector: '.container-video',
+        type: 'change',
+        style: 'filter',
+        to: 'brightness(0.5)'
       }
 
     ]
@@ -229,28 +261,4 @@ if (window.innerWidth >= 1280) {
   window.addEventListener('scroll', function() {
     choreographer.runAnimationsAt(window.pageYOffset);
   });
-
-  function renderVideo() {
-    var elVideo = document.createElement('video');
-    var attrClass = document.createAttribute('class');
-    var attrAutoplay = document.createAttribute('autoplay');
-    var attrLoop = document.createAttribute('loop');
-
-    attrClass.value = 'container-video';
-    elVideo.setAttributeNode(attrClass);
-    elVideo.setAttributeNode(attrAutoplay);
-    elVideo.setAttributeNode(attrLoop);
-
-    var elSource = document.createElement('source');
-    var attrSrc = document.createAttribute('src');
-
-    attrSrc.value = './vendor/videos/wos-video.mov';
-    elSource.setAttributeNode(attrSrc);
-
-    elVideo.appendChild(elSource)
-
-    document.getElementById('container').appendChild(elVideo);
-  }
-
-  renderVideo();
 }
