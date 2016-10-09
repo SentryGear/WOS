@@ -20,6 +20,24 @@ function renderVideo() {
   document.getElementById('container').appendChild(elVideo);
 }
 
+var musesHeight = 900;
+
+if (window.innerWidth < 768) {
+  $('.slider-slide-image').each( function() {
+    var $img = $( this );
+    $img.width( $img.width() * .575 );
+  });
+};
+
+if (window.innerWidth >= 1440) {
+  musesHeight = 1108;
+
+  $('.slider-slide-image').each( function() {
+    var $img = $( this );
+    $img.width( $img.width() * 1.4 );
+  });
+}
+
 if (window.innerWidth >= 1280) {
   function isSmallDesktop() {
     if (window.innerWidth >= 1280 && window.innerWidth < 1680) {
@@ -48,9 +66,6 @@ if (window.innerWidth >= 1280) {
       var collectionTitle = document.getElementById('container-collection-title'),
           collectionTitleHeight = parseInt(window.getComputedStyle(collectionTitle).getPropertyValue('height'));
 
-  var muses = document.getElementById('container-muses'),
-      musesHeight = parseInt(window.getComputedStyle(muses).getPropertyValue('height'));
-
   var follow = document.getElementById('container-follow'),
       followHeight = parseInt(window.getComputedStyle(follow).getPropertyValue('height')),
       followPaddingTop = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-top')),
@@ -78,7 +93,7 @@ if (window.innerWidth >= 1280) {
       pointEndMuses = pointStartMuses + window.innerHeight * .75;
 
   var pointStartFollow =
-        window.innerHeight * 1.5 + overviewHeight + collectionHeight + musesHeight - followHeight / 2,
+      window.innerHeight * 1.5 + overviewHeight + collectionHeight + musesHeight - followHeight / 2,
       pointEndFollow = pointStartFollow + followPaddingTop + followHeight;
 
   var choreographer = new Choreographer({
@@ -227,5 +242,5 @@ if (window.innerWidth >= 1280) {
     choreographer.runAnimationsAt(window.pageYOffset);
   });
 
-  renderVideo();
+  // renderVideo();
 }

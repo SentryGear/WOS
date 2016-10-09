@@ -66,6 +66,40 @@ body {
   background-color: $bodyBg;
 }
 
+.slick-track {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slider-slide {
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-image {
+    filter: grayscale(100%) brightness(61%);
+    cursor: pointer;
+  }
+
+  &-caption {
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    color: $light;
+    font-family: PortraitCondensed;
+    font-size: 33px;
+    letter-spacing: 2.1px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
 .container {
   background-color: $blue;
 
@@ -102,10 +136,10 @@ body {
           margin-top: 17px;
         }
       }
+    }
 
-      &-person {
-        font-family: PortraitCondensed;
-      }
+    &-person {
+      font-family: PortraitCondensed !important;
     }
 
     &-portrait {
@@ -171,11 +205,16 @@ body {
   }
 
   &-muses {
+    box-sizing: border-box;
     height: 100vh;
+    padding: 70px 0 90px 0;
+
     background-color: $rose;
     overflow: hidden;
 
     &-title {
+      margin-bottom: 50px;
+
       @include mobile-title;
       color: $mobileDarkTitle;
     }
@@ -424,6 +463,14 @@ body {
 }
 
 @media screen and (min-width: $s-tablet) and (max-width: $s-desktop - 1px) {
+  .slider-slide {
+    &-caption {
+      font-size: 59px;
+      letter-spacing: 3.8px;
+      line-height: 54px;
+    }
+  }
+
   .container {
     &-header {
       background-position: center;
@@ -508,6 +555,8 @@ body {
       padding: 87px 0 211px 0;
 
       &-title {
+        margin-bottom: 100px;
+
         color: $darkTitle;
         @include title;
       }
@@ -657,37 +706,29 @@ body {
 }
 
 @media screen and (min-width: $s-desktop) {
+  .slick-current {
+    .slider-slide-caption {
+      visibility: visible;
+    }
+  }
+  
+  .slider-slide {
+    &-image {
+      filter: grayscale(100%) brightness(100%);
+    }
+
+    &-caption {
+      visibility: hidden;
+
+      font-size: 94px;
+      letter-spacing: 6px;
+      line-height: 83px;
+    }
+  }
+
   .container {
     position: relative;
     background-color: rgba(0,0,0,0);
-
-    &-animation {
-      &-portrait {
-
-
-        &-image {
-          height: 434px;
-          width: 360px;
-
-          background-blend-mode: multiply;
-          background-color: $blue;
-          background-image: url('../vendor/images/designer.jpg');
-          background-position: center;
-          background-size: cover;
-        }
-
-        &-description {
-          width: 200px;
-          margin-top: 12px;
-
-          font-family: HelveticaLight;
-          font-size: 16px;
-          letter-spacing: 1.6px;
-          line-height: 20px;
-          text-align: left;
-        }
-      }
-    }
 
     &-video {
       position: fixed;
@@ -814,25 +855,13 @@ body {
 
     &-muses {
       z-index: 1;
-      box-sizing: border-box;
-      height: auto;
+      box-sizing: initial;
+      height: initial;
       padding: 100px 0 140px 0;
 
       &-title {
         color: $darkTitle;
         @include title;
-      }
-
-      &-slider {
-        height: 65%;
-        margin-top: 50px;
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        & > img {
-          filter: grayscale(100%);
-        }
       }
     }
 

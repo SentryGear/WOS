@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-
   <link href="./stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./stylesheets/slick.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <div class="container" id="container">
@@ -52,12 +52,27 @@
 
     <div class="container-muses" id="container-muses">
       <div class="container-muses-title">MUSES</div>
-      <div class="container-muses-slider">
-        <img src="../vendor/images/muse1.jpg" />
-        <img src="../vendor/images/muse2.jpg" />
-        <img src="../vendor/images/muse3.jpg" />
-        <img src="../vendor/images/muse4.jpg" />
-        <img src="../vendor/images/muse5.jpg" />
+      <div id="slider">
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="../vendor/images/muse1.jpg" />
+          <div class="slider-slide-caption">OLGA KARPUT’</div>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="../vendor/images/muse2.jpg" />
+          <div class="slider-slide-caption">NINA STAR</div>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="../vendor/images/muse3.jpg" />
+          <div class="slider-slide-caption">OLGA KARPUT’</div>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="../vendor/images/muse4.jpg" />
+          <div class="slider-slide-caption">OLGA KARPUT’</div>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="../vendor/images/muse5.jpg" />
+          <div class="slider-slide-caption">ALEX CHANG</div>
+        </div>
       </div>
     </div>
 
@@ -145,9 +160,9 @@
         <div class="container-stores-zones-zone">
           <div class="container-stores-zones-zone-title">ONLINE</div>
           <div class="container-stores-zones-zone-list">
-            <a href="http://www.selfridges.com/">SELFRIDGES.COM</a>
-            <a href="http://www.brownsfashion.com/">BROWNSFASHION.COM</a>
-            <a href="http://thesprezzatura.com/">THESPREZZATURA.COM</a>
+            <a target="_blank" href="http://www.selfridges.com/">SELFRIDGES.COM</a>
+            <a target="_blank" href="http://www.brownsfashion.com/">BROWNSFASHION.COM</a>
+            <a target="_blank" href="http://thesprezzatura.com/">THESPREZZATURA.COM</a>
           </div>
         </div>
         <div class="container-stores-zones-fake"></div>
@@ -182,7 +197,22 @@
     </div>
   </div>
 </body>
-<script src="./scripts/SmoothScroll.min.js"></script>
+<script src="./scripts/jquery.min.js"></script>
+<script src="./scripts/slick.min.js"></script>
 <script src="./scripts/choreographer.min.js"></script>
-<script src="./scripts/script.js"></script>
+<script src="./scripts/smooth_scroll.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#slider').slick({
+      arrows: false,
+      centerMode: true,
+      focusOnSelect: true,
+      infinite: true,
+      variableWidth: true
+    });
+  });
+</script>
+
+<script src="./scripts/main.js"></script>
 </html>
