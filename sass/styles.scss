@@ -1,11 +1,11 @@
-@import "compass/reset";
+@import "./reset.scss";
 
 // Fonts
-@font-face { font-family: HelveticaCondensed; src: url(../vendor/fonts/HelveticaCondensed.otf); }
-@font-face { font-family: HelveticaLight; src: url(../vendor/fonts/HelveticaLight.ttf); }
-@font-face { font-family: HelveticaRoman; src: url(../vendor/fonts/HelveticaRoman.ttf); }
-@font-face { font-family: HelveticaBold; src: url(../vendor/fonts/HelveticaBold.ttf); }
-@font-face { font-family: PortraitCondensed; src: url(../vendor/fonts/PortraitCondensed.ttc); }
+@font-face { font-family: HelveticaCondensed; src: url(../fonts/HelveticaCondensed.otf); }
+@font-face { font-family: HelveticaLight; src: url(../fonts/HelveticaLight.ttf); }
+@font-face { font-family: HelveticaRoman; src: url(../fonts/HelveticaRoman.ttf); }
+@font-face { font-family: HelveticaBold; src: url(../fonts/HelveticaBold.ttf); }
+@font-face { font-family: PortraitCondensed; src: url(../fonts/PortraitCondensed.ttc); }
 
 // Media queries breakpoints
 $s-tablet  : 768px;
@@ -111,14 +111,14 @@ body {
     @include center;
     height: 100vh;
 
-    background-image: url('../vendor/images/bg_photo.jpg');
+    background-image: url('../images/bg_photo.jpg');
     background-position-x: -383px;
 
     &-title {
       visibility: visible;
       height: 100%;
       width: 100%;
-      background-image: url('../vendor/images/logo.svg');
+      background-image: url('../images/logo.svg');
       background-size: 75vw;
       background-position: center;
       background-repeat: no-repeat;
@@ -162,7 +162,7 @@ body {
 
           background-blend-mode: multiply;
           background-color: $blue;
-          background-image: url('../vendor/images/designer.jpg');
+          background-image: url('../images/designer.jpg');
           background-position-x: -42px;
           background-size: 130%;
         }
@@ -228,7 +228,7 @@ body {
     @include center;
     height: 100vh;
 
-    background-image: url('../vendor/images/bg_photo.jpg');
+    background-image: url('../images/bg_photo.jpg');
     background-position-x: -220px;
 
     &-title {
@@ -315,7 +315,7 @@ body {
 
   &-footer {
     padding: 38px 0 20px 0;
-    background-image: url('../vendor/images/bg_photo.jpg');
+    background-image: url('../images/bg_photo.jpg');
 
     color: $light;
     text-align: center;
