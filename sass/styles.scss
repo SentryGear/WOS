@@ -766,6 +766,8 @@ body {
       height: 237px;
       margin: 0 auto -237px auto;
       padding: 100px 0 0 0;
+      position: relative;
+      z-index: 100;
     }
 
     &-header {
