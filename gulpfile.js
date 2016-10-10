@@ -24,7 +24,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('scripts/*.js', ['scripts', 'styles']);
+  gulp.watch('scripts/*.js', ['scripts']);
+  gulp.watch('sass/*.scss', ['styles']);
 });
 
 gulp.task('default', ['scripts', 'styles', 'watch']);

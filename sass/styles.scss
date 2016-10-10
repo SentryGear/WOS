@@ -430,16 +430,18 @@ body {
 
         &-block {
           @include center;
-
+          flex-direction: row;
           box-sizing: border-box;
           height: 48px;
           width: 134px;
 
+          cursor: pointer;
           border: 2px solid $socialBorder;
 
           font-family: HelveticaBold;
           font-size: 14px;
           letter-spacing: .9px;
+          line-height: 1px;
 
           &:nth-child(2) {
             border-left: none;
@@ -447,6 +449,16 @@ body {
 
           &:nth-child(3) {
             border-top: none;
+          }
+
+          &:hover {
+            background-color: rgba(180, 180, 180, .5);
+          }
+
+          &-icon {
+            height: 14px;
+            width: 14px;
+            margin-right: 12px;
           }
         }
       }
@@ -757,12 +769,10 @@ body {
     }
 
     &-header {
-      position: relative;
-      top: 0px;
-
       background: none;
 
       &-title {
+        top: 0px;
         z-index: -1;
         position: fixed;
         background-size: 50vw;
@@ -1057,6 +1067,40 @@ body {
       &-portrait {
         padding-top: 47.5%;
       }
+    }
+  }
+}
+
+@media screen and (min-width: $s-tablet) and (max-width: 909px) {
+  .container {
+    &-footer {
+      &-copy {
+        width: 260px;
+        display: flex;
+        align-items: flex-end;
+        margin: 0;
+
+        font-family: HelveticaBold;
+        font-size: 12px;
+        letter-spacing: .9px;
+        line-height: 14px;
+        text-align: left;
+
+        opacity: .36;
+      }
+
+      &-tcopy {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1165px) and (max-width: $s-desktop - 1px) {
+  .container {
+    &-footer {
+      padding-left: 225px;
+      padding-right: 225px;
     }
   }
 }
