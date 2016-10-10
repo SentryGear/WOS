@@ -1,11 +1,10 @@
 var express = require('express');
-var path = require('path');
-
 var app = express();
 
-var staticPath = path.join(__dirname, '/public');
-app.use(express.static(staticPath));
+var port = process.env.PORT || 8080;
 
-app.listen(8080, function() {
-  console.log('listening');
+app.use(express.static(__dirname + '/public'));
+
+app.listen(port, function() {
+    console.log('App is running on http://localhost:' + port);
 });
