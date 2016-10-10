@@ -365,7 +365,7 @@ body {
 
         &-input {
           box-sizing: border-box;
-          width: 158px;
+          width: 157px;
           padding: 22px 0 22px 22px;
 
           background-color: rgba(253,243,243,0);
@@ -757,6 +757,9 @@ body {
     }
 
     &-header {
+      position: relative;
+      top: 0px;
+
       background: none;
 
       &-title {

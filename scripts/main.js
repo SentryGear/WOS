@@ -1,28 +1,32 @@
-$('#slider').slick({
-  arrows: false,
-  centerMode: true,
-  focusOnSelect: true,
-  infinite: true,
-  variableWidth: true
+$(document).ready(function(){
+  $('#slider').slick({
+    arrows: false,
+    centerMode: true,
+    focusOnSelect: true,
+    infinite: true,
+    variableWidth: true
+  });
 });
 
 var musesHeight = 900;
 
-if (window.innerWidth < 768) {
-  $('.slider-slide-image').each( function() {
-    var $img = $( this );
-    $img.width( $img.width() * .575 );
-  });
-};
+$( '.slider-slide-image' ).last().load(function () {
+  if (window.innerWidth < 768) {
+    $('.slider-slide-image').each( function() {
+      var $img = $( this );
+      $img.width() >= 270 && $img.width() <= 362 && $img.width( $img.width() * .575 );
+    });
+  };
 
-if (window.innerWidth >= 1440) {
-  musesHeight = 1108;
+  if (window.innerWidth >= 1440) {
+    musesHeight = 1108;
 
-  $('.slider-slide-image').each( function() {
-    var $img = $( this );
-    $img.width( $img.width() * 1.4 );
-  });
-}
+    $('.slider-slide-image').each( function() {
+      var $img = $( this );
+      $img.width() >= 270 && $img.width() <= 362 && $img.width( $img.width() * 1.4 );
+    });
+  }
+});
 
 if (window.innerWidth >= 1280) {
   function renderVideo() {
@@ -68,6 +72,14 @@ if (window.innerWidth >= 1280) {
 
       var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
           portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
+
+  var overviewWidth = $( '#container-overview' ).width();
+  var overviewPaddingL = parseInt($( '.container-overview-portrait' ).css( 'padding-left' ));
+  var overviewPaddingR = parseInt($( '.container-overview-portrait' ).css( 'padding-right' ));
+  var portraitMarginL = parseInt($( '.container-overview-portrait' ).css( 'margin-left' ));
+  var portraitWidth = parseInt($( '.container-overview-portrait-movable' ).css( 'width' ));
+
+  $( '.container-overview-text' ).width( overviewWidth - portraitMarginL - portraitWidth );
 
   var collection = document.getElementById('container-collection'),
       collectionHeight = parseInt(window.getComputedStyle(collection).getPropertyValue('height')),
