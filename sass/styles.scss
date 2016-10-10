@@ -722,12 +722,6 @@ body {
 }
 
 @media screen and (min-width: $s-desktop) {
-  .slick-current {
-    .slider-slide-caption {
-      visibility: visible;
-    }
-  }
-
   .slider-slide {
     &-image {
       filter: grayscale(100%) brightness(100%);
@@ -739,6 +733,18 @@ body {
       font-size: 94px;
       letter-spacing: 6px;
       line-height: 83px;
+    }
+
+    &:hover {
+      .slider-slide-image {
+        filter: grayscale(100%) brightness(50%);
+        transition: filter .25s linear;
+      }
+
+      .slider-slide-caption {
+        visibility: visible;
+        transition: filter .25s linear;
+      }
     }
   }
 

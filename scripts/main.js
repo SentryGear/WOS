@@ -258,7 +258,14 @@ if (window.innerWidth >= 1280) {
       },
 
       {
-        range: [0, 236],
+        range: [-1, 236],
+        selector: '.container-video',
+        type: 'change',
+        style: 'filter',
+        to: 'brightness(0.5)'
+      },
+      {
+        range: [window.innerHeight * 1.5, height],
         selector: '.container-video',
         type: 'change',
         style: 'filter',
