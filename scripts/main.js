@@ -1,11 +1,9 @@
-$(document).ready(function(){
-  $('#slider').slick({
-    arrows: false,
-    centerMode: true,
-    focusOnSelect: true,
-    infinite: true,
-    variableWidth: true
-  });
+$('#slider').slick({
+  arrows: false,
+  centerMode: true,
+  focusOnSelect: true,
+  infinite: true,
+  variableWidth: true
 });
 
 var musesHeight = 900;
