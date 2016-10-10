@@ -1,0 +1,11 @@
+{
+  "name": "wos",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SentryGear/WOS.git"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
