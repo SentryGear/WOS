@@ -100,17 +100,6 @@ body {
   }
 }
 
-.apple-follow-link {
-  display: initial !important;
-
-  span {
-    display: inline-block;
-    position: relative;
-    top: 45%;
-    transform: translateY(-50%);
-  }
-}
-
 .container {
   background-color: $blue;
 
@@ -248,7 +237,6 @@ body {
     }
 
     &-link {
-      @include center;
       height: 95px;
       width: 250px;
       margin: 11px auto 0 auto;
@@ -261,6 +249,13 @@ body {
 
       &:hover {
         background-color: $light;
+      }
+
+      #container-follow-link-text {
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }

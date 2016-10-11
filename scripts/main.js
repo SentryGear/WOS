@@ -31,7 +31,7 @@ $( '.slider-slide-image' ).last().on('load', function () {
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
 if (isSafari) {
-  $('#container-follow-link').addClass('apple-follow-link');
+  $('#container-follow-link-text').css('top', '45%');
 }
 
 if (window.innerWidth >= 1280) {
