@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 var musesHeight = 900;
 
-$( '.slider-slide-image' ).last().load(function () {
+$( '.slider-slide-image' ).last().on('load', function () {
   if (window.innerWidth < 768) {
     $('.slider-slide-image').each( function() {
       var $img = $( this );
@@ -27,6 +27,12 @@ $( '.slider-slide-image' ).last().load(function () {
     });
   }
 });
+
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+if (isSafari) {
+  $('#container-follow-link').addClass('apple-follow-link');
+}
 
 if (window.innerWidth >= 1280) {
   function renderVideo() {
