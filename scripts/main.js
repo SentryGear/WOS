@@ -129,6 +129,15 @@ if (window.innerWidth >= 1280) {
 
       // Header
       {
+        range: [-1, 236],
+        selector: '.container-header-title',
+        type: 'scale',
+        style: 'top',
+        from: 236,
+        to: 0,
+        unit: 'px'
+      },
+      {
         range: [window.innerHeight, window.innerHeight * 1.75],
         selector: '.container-header-title',
         type: 'scale',
@@ -263,6 +272,7 @@ if (window.innerWidth >= 1280) {
         to: 1
       },
 
+      // Fade video
       {
         range: [-1, 236],
         selector: '.container-video',
