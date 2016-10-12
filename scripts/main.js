@@ -286,12 +286,165 @@ if (window.innerWidth >= 1280) {
         type: 'change',
         style: 'filter',
         to: 'brightness(0.5)'
+      },
+
+      // Nav dots
+      // nav-dot-header
+      {
+        range: [-1, 237],
+        selector: '#nav-dot-header',
+        type: 'change',
+        style: 'opacity',
+        to: 1
+      },
+      {
+        range: [236, window.innerHeight * 2],
+        selector: '#nav-dot-header',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0
+      },
+      {
+        range: [window.innerHeight * 2, height],
+        selector: '#nav-dot-header',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+
+      // nav-dot-overview
+      {
+        range: [-1, 236],
+        selector: '#nav-dot-overview',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+      {
+        range: [236, window.innerHeight * 2],
+        selector: '#nav-dot-overview',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
+      },
+      {
+        range: [window.innerHeight * 2 - 1, pointStartCollection + window.innerHeight * .5],
+        selector: '#nav-dot-overview',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0
+      },
+      {
+        range: [pointStartCollection + window.innerHeight * .5, height],
+        selector: '#nav-dot-overview',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+
+      // nav-dot-collection
+      {
+        range: [-1, window.innerHeight * 2],
+        selector: '#nav-dot-collection',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+      {
+        range: [window.innerHeight * 2, pointStartCollection + window.innerHeight * .5],
+        selector: '#nav-dot-collection',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
+      },
+      {
+        range: [pointStartCollection + window.innerHeight * .5 -1, pointStartMuses + window.innerHeight],
+        selector: '#nav-dot-collection',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0
+      },
+      {
+        range: [pointStartMuses + window.innerHeight, height],
+        selector: '#nav-dot-collection',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+
+      // nav-dot-muses
+      {
+        range: [-1, pointStartCollection + window.innerHeight * .5],
+        selector: '#nav-dot-muses',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+      {
+        range: [pointStartCollection + window.innerHeight * .5, pointStartMuses + window.innerHeight],
+        selector: '#nav-dot-muses',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
+      },
+      {
+        range: [pointStartMuses + window.innerHeight -1, pointStartFollow + window.innerHeight * .5],
+        selector: '#nav-dot-muses',
+        type: 'scale',
+        style: 'opacity',
+        from: 1,
+        to: 0
+      },
+      {
+        range: [pointStartFollow + window.innerHeight * .5, height],
+        selector: '#nav-dot-muses',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+
+      // nav-dot-follow
+      {
+        range: [-1, pointStartMuses + window.innerHeight],
+        selector: '#nav-dot-follow',
+        type: 'change',
+        style: 'opacity',
+        to: 0
+      },
+      {
+        range: [pointStartMuses + window.innerHeight, pointStartFollow + window.innerHeight * .5],
+        selector: '#nav-dot-follow',
+        type: 'scale',
+        style: 'opacity',
+        from: 0,
+        to: 1
       }
 
     ]
-  })
+  });
 
   window.addEventListener('scroll', function() {
     choreographer.runAnimationsAt(window.pageYOffset);
+  });
+
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
   });
 }

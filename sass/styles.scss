@@ -107,6 +107,10 @@ body {
     display: none;
   }
 
+  &-nav {
+    display: none;
+  }
+
   &-header {
     @include center;
     height: 100vh;
@@ -789,6 +793,62 @@ body {
       z-index: 100;
     }
 
+    &-nav {
+      display: initial;
+      z-index: 100;
+      position: fixed;
+      top: 50vh;
+      left: 3.33vw;
+      transform: translateY(-50%);
+
+      &-dot {
+        $dotSize: 14px;
+
+        display: block;
+
+        box-sizing: border-box;
+        height: $dotSize;
+        width: $dotSize;
+        margin: 8px 0;
+
+        border-radius: 50%;
+        border: 1px solid $light;
+        overflow: hidden;
+
+        &-inside {
+          height: 100%;
+          width: 100%;
+          background-color: $light;
+          opacity: 0;
+        }
+      }
+    }
+
+    #anchor-header {
+      position: relative;
+      top: 237px;
+    }
+
+    #anchor-overview {
+      position: relative;
+      top: 100vh;
+    }
+
+    #anchor-collection {
+      position: relative;
+      top: 1px;
+    }
+
+    #anchor-muses {
+      position: relative;
+      top: 1px;
+    }
+
+    #anchor-follow {
+      position: relative;
+      top: 1px;
+    }
+
     &-header {
       background: none;
 
@@ -1062,6 +1122,14 @@ body {
 
 @media screen and (min-width: $s-desktop) and (max-width: $m-desktop - 1px) {
   .container {
+    &-nav {
+      &-dot {
+        $dotSize: 12px;
+        height: $dotSize;
+        width: $dotSize;
+      }
+    }
+
     &-overview {
       &-text {
         p {
