@@ -59,14 +59,6 @@ if (window.innerWidth >= 1280) {
 
   renderVideo();
 
-  function isSmallDesktop() {
-    if (window.innerWidth >= 1280 && window.innerWidth < 1680) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   var body = document.body,
       html = document.documentElement;
 
@@ -75,17 +67,6 @@ if (window.innerWidth >= 1280) {
   var overview = document.getElementById('container-overview'),
       overviewHeight = parseInt(window.getComputedStyle(overview).getPropertyValue('height')),
       overviewPaddingTop = parseInt(window.getComputedStyle(overview).getPropertyValue('padding-top'));
-
-      var portraitImage = document.getElementById('container-overview-portrait-movable-image'),
-          portraitImageHeight = parseInt(window.getComputedStyle(portraitImage).getPropertyValue('height'));
-
-  var overviewWidth = $( '#container-overview' ).width();
-  var overviewPaddingL = parseInt($( '.container-overview-portrait' ).css( 'padding-left' ));
-  var overviewPaddingR = parseInt($( '.container-overview-portrait' ).css( 'padding-right' ));
-  var portraitMarginL = parseInt($( '.container-overview-portrait' ).css( 'margin-left' ));
-  var portraitWidth = parseInt($( '.container-overview-portrait-movable' ).css( 'width' ));
-
-  $( '.container-overview-text' ).width( overviewWidth - portraitMarginL - portraitWidth );
 
   var collection = document.getElementById('container-collection'),
       collectionHeight = parseInt(window.getComputedStyle(collection).getPropertyValue('height')),
@@ -98,21 +79,6 @@ if (window.innerWidth >= 1280) {
       followHeight = parseInt(window.getComputedStyle(follow).getPropertyValue('height')),
       followPaddingTop = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-top')),
       followPaddingBottom = parseInt(window.getComputedStyle(follow).getPropertyValue('padding-bottom'));
-
-  var portraitHeight = portraitImageHeight + 12 + 40,
-      portraitStartPosX, portraitEndPosX, portraitEndPosY;
-
-  if (isSmallDesktop()) {
-    portraitStartPosX = -250;
-    portraitEndPosX = 50;
-
-    portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3;
-  } else {
-    portraitStartPosX = -360;
-    portraitEndPosX = 70;
-
-    portraitEndPosY = window.innerHeight * 1.5 + overviewHeight - overviewPaddingTop * 3 + 40;
-  }
 
   var pointStartCollection = window.innerHeight * 1.5 + overviewHeight - collectionTitleHeight / 2,
       pointEndCollection = pointStartCollection + collectionPaddingTop + collectionTitleHeight;
@@ -162,43 +128,14 @@ if (window.innerWidth >= 1280) {
         to: 'hidden'
       },
 
-      // Portrait
+      // Overview portrait
       {
-        range: [window.innerHeight*1.5, height],
-        selector: '.container-overview-portrait-movable',
-        type: 'change',
-        style: 'visibility',
-        to: 'visible'
-      },
-      {
-        range: [window.innerHeight*1.5, window.innerHeight * 1.5 + overviewPaddingTop + portraitHeight / 2],
-        selector: '.container-overview-portrait-movable',
+        range: [window.innerHeight, window.innerHeight * 2],
+        selector: '.container-overview-portrait',
         type: 'scale',
-        style: 'right',
-        from: portraitStartPosX,
-        to: portraitEndPosX,
-        unit: 'px'
-      },
-      {
-        range: [portraitEndPosY, height],
-        selector: '.container-overview-portrait-fake',
-        type: 'change',
-        style: 'display',
-        to: 'none'
-      },
-      {
-        range: [portraitEndPosY, height],
-        selector: '.container-overview-portrait-movable',
-        type: 'change',
-        style: 'position',
-        to: 'inherit'
-      },
-      {
-        range: [portraitEndPosY, height],
-        selector: '.container-overview-portrait-movable',
-        type: 'change',
-        style: 'transform',
-        to: 'none'
+        style: 'opacity',
+        from: 0,
+        to: 1
       },
 
       // Collection

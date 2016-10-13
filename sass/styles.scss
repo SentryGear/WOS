@@ -153,33 +153,27 @@ body {
     &-portrait {
       margin-top: 38px;
 
-      &-fake {
-        display: none
+      &-image {
+        display: block;
+        height: 350px;
+        width: 250px;
+        margin: 0 auto;
+
+        background-blend-mode: multiply;
+        background-color: $blue;
+        background-image: url('../images/designer.jpg');
+        background-position-x: -42px;
+        background-size: 130%;
       }
 
-      &-movable {
-        &-image {
-          display: block;
-          height: 350px;
-          width: 250px;
-          margin: 0 auto;
+      &-description {
+        margin-top: 15px;
 
-          background-blend-mode: multiply;
-          background-color: $blue;
-          background-image: url('../images/designer.jpg');
-          background-position-x: -42px;
-          background-size: 130%;
-        }
-
-        &-description {
-          margin-top: 15px;
-
-          font-family: HelveticaLight;
-          font-size: 14px;
-          letter-spacing: 1.4px;
-          line-height: 20px;
-          text-align: center;
-        }
+        font-family: HelveticaLight;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        line-height: 20px;
+        text-align: center;
       }
     }
   }
@@ -535,24 +529,22 @@ body {
         width: 360px;
         margin: 60px auto 0 auto;
 
-        &-movable {
-          &-image {
-            height: 434px;
-            width: 100%;
+        &-image {
+          height: 434px;
+          width: 100%;
 
-            background-blend-mode: normal;
-            background-position: center;
-            background-size: cover;
-          }
+          background-blend-mode: normal;
+          background-position: center;
+          background-size: cover;
+        }
 
-          &-description {
-            width: 200px;
-            margin-top: 7px;
+        &-description {
+          width: 200px;
+          margin-top: 7px;
 
-            font-size: 16px;
-            letter-spacing: 1.6px;
-            text-align: left;
-          }
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          text-align: left;
         }
       }
     }
@@ -871,7 +863,7 @@ body {
       max-width: none;
       margin: 100vh 0 0 20%;
       box-sizing: border-box;
-      padding: 145px 70px 145px 145px;
+      padding: 145px 72.5px 145px 145px;
 
       background-color: $blue;
 
@@ -888,45 +880,24 @@ body {
       }
 
       &-portrait {
-        margin: 0 0 0 110px;
-        padding-top: 40%;
+        margin: 0 0 0 72.5px;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
-        &-fake {
-          height: 486px;
+        &-image {
+          height: 434px;
           width: 360px;
-          background-color: rgba(0,0,0,.5);
-          display: block;
-          visibility: hidden;
+
+          background-position: center;
+          background-size: cover;
         }
 
-        &-movable {
-          visibility: hidden;
-          position: fixed;
-          right: 0px;
-          top: 50vh;
-          transform: translateY(-50%);
+        &-description {
+          width: 200px;
+          margin-top: 12px;
 
-          &-image {
-            height: 434px;
-            width: 360px;
-
-            background-position: center;
-            background-size: cover;
-          }
-
-          &-description {
-            width: 200px;
-            margin-top: 12px;
-
-            font-size: 16px;
-            letter-spacing: 1.6px;
-            line-height: 20px;
-            text-align: left;
-          }
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          line-height: 20px;
+          text-align: left;
         }
       }
     }
@@ -1102,18 +1073,11 @@ body {
       padding: 100px 50px 100px 100px;
 
       &-portrait {
-        margin: 0 0 0 50px;
+        margin-left: 50px;
 
-        &-fake {
-          height: 402px;
+        &-image {
+          height: 324px;
           width: 250px;
-        }
-
-        &-movable {
-          &-image {
-            height: 350px;
-            width: 250px;
-          }
         }
       }
     }
@@ -1141,20 +1105,6 @@ body {
             margin-top: .1em;
           }
         }
-      }
-
-      &-portrait {
-        padding-top: 50%;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $m-desktop) and (max-width: $l-desktop - 1px) {
-  .container {
-    &-overview {
-      &-portrait {
-        padding-top: 47.5%;
       }
     }
   }
