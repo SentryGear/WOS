@@ -57,7 +57,7 @@ if (window.innerWidth >= 1280) {
     document.getElementById('container').appendChild(elVideo);
   }
 
-  renderVideo();
+  // renderVideo();
 
   var body = document.body,
       html = document.documentElement;
@@ -98,7 +98,7 @@ if (window.innerWidth >= 1280) {
         range: [-1, 236],
         selector: '.container-header-title',
         type: 'scale',
-        style: 'top',
+        style: 'transform:translateY',
         from: 236,
         to: 0,
         unit: 'px'
@@ -159,7 +159,7 @@ if (window.innerWidth >= 1280) {
         range: [pointStartCollection, pointEndCollection],
         selector: '.container-collection',
         type: 'scale',
-        style: 'top',
+        style: 'transform:translateY',
         from: -(collectionPaddingTop + collectionTitleHeight) * 1.25,
         to: 0,
         unit: 'px'
@@ -180,7 +180,7 @@ if (window.innerWidth >= 1280) {
         range: [pointStartFollow, pointEndFollow],
         selector: '.container-follow',
         type: 'scale',
-        style: 'top',
+        style: 'transform:translateY',
         from: -(followPaddingTop + followHeight),
         to: 0,
         unit: 'px'
