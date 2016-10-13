@@ -100,6 +100,21 @@ body {
   }
 }
 
+.white-placeholder {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $light !important;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $light !important;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $light !important;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $light !important;
+  }
+}
+
 .container {
   background-color: $blue;
 
@@ -199,8 +214,16 @@ body {
         width: 200px;
         margin: 17px 0;
 
+        cursor: pointer;
+
+        transition: transform .2s ease-in;
+
         &:nth-child(n+7) {
           display: none;
+        }
+
+        &:hover {
+          transform: scale(1.15);
         }
       }
     }
@@ -241,12 +264,16 @@ body {
 
       box-sizing: border-box;
       border: 7px solid $rose;
+      cursor: pointer;
 
       @include mobile-title;
       color: $rose;
 
+      transition: all .2s ease-in;
+
       &:hover {
-        background-color: $light;
+        color: $light;
+        border-color: $light;
       }
 
       #container-follow-link-text {
@@ -309,8 +336,14 @@ body {
           letter-spacing: 1px;
           line-height: 20px;
 
+          transition: opacity .2s ease-in;
+
           &:nth-child(1) {
             margin-top: 18px;
+          }
+
+          &:hover {
+            opacity: .4;
           }
         }
       }
@@ -345,6 +378,12 @@ body {
         font-size: 15px;
         letter-spacing: 1px;
         line-height: 20px;
+
+        transition: opacity .2s ease-in;
+      }
+
+      a:hover {
+        opacity: .4;
       }
     }
 
@@ -363,14 +402,29 @@ body {
         height: 60px;
         width: 277px;
         margin: 0 auto;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
         background-color: $formBg;
+        border: 2px solid $formBg;
         overflow: hidden;
+
+        transition: background .2s ease-in;
+
+        &:hover {
+          background-color: $light;
+          border: 2px solid $rose;
+        }
 
         &-input {
           box-sizing: border-box;
-          width: 157px;
-          padding: 22px 0 22px 22px;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 23px 0 21px 21px;
 
           background-color: rgba(253,243,243,0);
           border: none;
@@ -399,14 +453,16 @@ body {
 
         &-button {
           box-sizing: border-box;
-          height: 60px;
-          width: 115px;
+          height: 100%;
+          min-width: 115px;
           margin: 0;
           padding: 0;
 
           background-color: rgba(253,243,243,0);
           border: none;
+          cursor: pointer;
 
+          color: $rose;
           font-family: HelveticaBold;
           font-size: 16px;
           letter-spacing: .9px;
@@ -444,6 +500,8 @@ body {
           font-size: 14px;
           letter-spacing: .9px;
 
+          transition: background .2s ease-in;
+
           &:nth-child(2) {
             border-left: none;
           }
@@ -453,7 +511,7 @@ body {
           }
 
           &:hover {
-            background-color: rgba(180, 180, 180, .5);
+            background-color: $dark;
           }
 
           &-icon {
@@ -684,8 +742,8 @@ body {
         &-form {
           width: 100%;
 
-          &-input {
-            width: 280px;
+          &-button {
+            min-width: 125px;
           }
         }
       }
@@ -747,12 +805,12 @@ body {
     &:hover {
       .slider-slide-image {
         filter: grayscale(100%) brightness(50%);
-        transition: filter .25s linear;
+        transition: filter .2s linear;
       }
 
       .slider-slide-caption {
         visibility: visible;
-        transition: filter .25s linear;
+        transition: filter .2s linear;
       }
     }
   }
@@ -772,7 +830,7 @@ body {
       z-index: -2;
       transform: translateX(-50%) translateY(-50%);
 
-      transition: filter 1s ease;
+      transition: filter 1s ease-in;
     }
 
     #top-footer {
@@ -1040,8 +1098,8 @@ body {
         &-form {
           width: 100%;
 
-          &-input {
-            width: 251px;
+          &-button {
+            min-width: 125px;
           }
         }
       }

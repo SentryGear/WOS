@@ -1,3 +1,4 @@
+// Muses slider configuration
 $(document).ready(function(){
   $('#slider').slick({
     arrows: false,
@@ -28,12 +29,46 @@ $( '.slider-slide-image' ).last().on('load', function () {
   }
 });
 
+// Follow link vertical centring for Safari
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
 if (isSafari) {
   $('#container-follow-link-text').css('top', '45%');
 }
 
+// Footer's subscribe focus styling
+var clicking = false;
+
+$( ".container-footer-subscribe-form-button" ).mousedown(function() {
+  clicking = true;
+
+  $( ".container-footer-subscribe-form" ).css('background-color', '#ef636e');
+  $( ".container-footer-subscribe-form-button" ).css('color', '#ffffff');
+  $( ".container-footer-subscribe-form-input" ).css('color', '#ffffff');
+  $( ".container-footer-subscribe-form-input" ).addClass('white-placeholder');
+});
+
+$( ".container-footer-subscribe-form-button" ).mouseup(function() {
+  clicking = false;
+
+  $( ".container-footer-subscribe-form" ).css('background-color', '#ffffff');
+  $( ".container-footer-subscribe-form-button" ).css('color', '#ef636e');
+  $( ".container-footer-subscribe-form-input" ).css('color', '#000000');
+  $( ".container-footer-subscribe-form-input" ).removeClass('white-placeholder');
+});
+
+$( ".container-footer-subscribe-form-button" ).mousemove(function() {
+  if (!clicking) {
+    return;
+  } else {
+    $( ".container-footer-subscribe-form" ).css('background-color', '#ffffff');
+    $( ".container-footer-subscribe-form-button" ).css('color', '#ef636e');
+    $( ".container-footer-subscribe-form-input" ).css('color', '#000000');
+    $( ".container-footer-subscribe-form-input" ).removeClass('white-placeholder');
+  }
+});
+
+// Special for desktop
 if (window.innerWidth >= 1280) {
   function renderVideo() {
     var elVideo = document.createElement('video');
@@ -57,7 +92,7 @@ if (window.innerWidth >= 1280) {
     document.getElementById('container').appendChild(elVideo);
   }
 
-  renderVideo();
+  // renderVideo();
 
   var body = document.body,
       html = document.documentElement;
