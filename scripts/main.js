@@ -57,7 +57,7 @@ if (window.innerWidth >= 1280) {
     document.getElementById('container').appendChild(elVideo);
   }
 
-  // renderVideo();
+  renderVideo();
 
   var body = document.body,
       html = document.documentElement;
