@@ -122,6 +122,10 @@ body {
     display: none;
   }
 
+  &-audio {
+    display: none;
+  }
+
   &-nav {
     display: none;
   }
@@ -486,6 +490,7 @@ body {
           box-sizing: border-box;
           height: 48px;
           width: 134px;
+          padding-left: 15px;
 
           cursor: pointer;
           border: 2px solid $socialBorder;
@@ -493,6 +498,7 @@ body {
           font-family: HelveticaBold;
           font-size: 14px;
           letter-spacing: .9px;
+          text-align: left;
 
           transition: background .2s ease-in;
 
@@ -950,12 +956,32 @@ body {
       z-index: 100;
     }
 
+    &-audio {
+      display: initial;
+
+      position: fixed;
+      left: 14px;
+      top: 14px;
+
+      &-icon {
+        height: 46px;
+        width: 46px;
+
+        cursor: pointer;
+        transition: opacity .2s ease-in;
+
+        &:hover {
+          opacity: .4;
+        }
+      }
+    }
+
     &-nav {
       display: initial;
       z-index: 100;
       position: fixed;
       top: 50vh;
-      left: 3.33vw;
+      left: 30px;
       transform: translateY(-50%);
 
       &-dot {

@@ -101,6 +101,29 @@ $( ".container-footer-subscribe-form-button" ).mousemove(function() {
 
 // Special for desktop
 if (window.innerWidth >= 1280) {
+  var isAudio = false;
+  var isAudioOn = false;
+  $( '.container-audio-icon' ).on('click', function () {
+    if (isAudioOn) {
+      isAudioOn = false;
+      $(this).attr('src', '../vendor/images/audio-off.svg');
+
+      if (isAudio) {
+        $( '.container-audioplayer' ).trigger('pause');
+      }
+    } else {
+      isAudioOn = true;
+      $(this).attr('src', '../vendor/images/audio-on.svg');
+
+      if (!isAudio) {
+        isAudio = true;
+        $( '.container' ).append('<audio autoplay loop class="container-audioplayer"><source src="./vendor/audio/wos-audio.mp3" type="audio/mpeg"></audio>');
+      } else {
+        $( '.container-audioplayer' ).trigger('play');
+      }
+    }
+  });
+
   function renderVideo() {
     var elVideo = document.createElement('video');
     var attrClass = document.createAttribute('class');
