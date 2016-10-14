@@ -115,7 +115,7 @@ if (window.innerWidth >= 1280) {
     var elSource = document.createElement('source');
     var attrSrc = document.createAttribute('src');
 
-    attrSrc.value = './vendor/videos/wos-video.mov';
+    attrSrc.value = './vendor/videos/wos-video-muted-compressed.mp4';
     elSource.setAttributeNode(attrSrc);
 
     elVideo.appendChild(elSource)
