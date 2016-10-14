@@ -22,11 +22,13 @@ $( '.container-collection-images-image' ).on('click', function () {
     setImages(imgNext);
   });
 
-  $('.viewer').css('display', 'block');
+  $('.viewer').css('display', 'block').animate({opacity: 1}, 200);
 });
 
 $( '.viewer-close' ).on('click', function () {
-  $('.viewer').css('display', 'none');
+  $('.viewer').animate({opacity: 0}, 200, function() {
+    $(this).css('display', 'none');
+  })
 });
 
 // Muses slider configuration
