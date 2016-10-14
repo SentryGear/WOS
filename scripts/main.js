@@ -1,3 +1,34 @@
+// Collection image viewer
+$( '.container-collection-images-image' ).on('click', function () {
+  var img, imgPrev, imgNext;
+
+  function setImages(mainImg) {
+    img = mainImg;
+    imgPrev = $('.container-collection-images-image').eq( img.index() - 1 );
+    imgNext = $('.container-collection-images-image').eq( img.is(':last-child') ? 0 : img.index() + 1 );
+
+    $('.viewer-images-image.center').attr('src', img.attr('src'));
+    $('.viewer-images-image.left').attr('src', imgPrev.attr('src'));
+    $('.viewer-images-image.right').attr('src', imgNext.attr('src'));
+  }
+
+  setImages($(this));
+
+  $( '.viewer-arrow.left' ).on('click', function () {
+    setImages(imgPrev);
+  });
+
+  $( '.viewer-arrow.right' ).on('click', function () {
+    setImages(imgNext);
+  });
+
+  $('.viewer').css('display', 'block');
+});
+
+$( '.viewer-close' ).on('click', function () {
+  $('.viewer').css('display', 'none');
+});
+
 // Muses slider configuration
 $(document).ready(function(){
   $('#slider').slick({
@@ -92,7 +123,7 @@ if (window.innerWidth >= 1280) {
     document.getElementById('container').appendChild(elVideo);
   }
 
-  // renderVideo();
+  renderVideo();
 
   var body = document.body,
       html = document.documentElement;
