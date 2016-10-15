@@ -203,9 +203,17 @@ if (window.innerWidth >= 1280) {
       window.innerHeight * 1.5 + overviewHeight + collectionHeight + musesHeight - followHeight / 2,
       pointEndFollow = pointStartFollow + followPaddingTop + followHeight;
 
-  var choreographer = new Choreographer({
-    animations: [
+  var boxShadowScale = function boxShadowScale(data) {
+    var scaledValue = ((data.to - data.from) * data.progress) + data.from;
+    var scaledValueString = 'inset 0 0 0 ' + scaledValue + 'px #fff';
+    data.node.style[data.style] = scaledValueString;
+  };
 
+  var choreographer = new Choreographer({
+    customFunctions: {
+      boxShadowScale: boxShadowScale
+    },
+    animations: [
       // Header
       {
         range: [-1, 236],
@@ -339,42 +347,138 @@ if (window.innerWidth >= 1280) {
       },
 
       // Animaitons for navigation dots
+      // dot-header
       {
-        range: [-1, window.innerHeight * 2 - 1],
+        range: [-1, 237],
         selector: '#dot-header',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 8px #fff'
       },
       {
-        range: [window.innerHeight * 2, pointStartCollection + window.innerHeight * .5 - 1],
+        range: [236, window.innerHeight * 2],
+        selector: '#dot-header',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 8,
+        to: 1
+      },
+      {
+        range: [window.innerHeight * 2, height],
+        selector: '#dot-header',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 1px #fff'
+      },
+      // // dot-overview
+      {
+        range: [-1, 236],
         selector: '#dot-overview',
         type: 'change',
         style: 'box-shadow',
-        to: 'inset 0 0 0 8px #fff'
+        to: 'inset 0 0 0 1px #fff'
       },
       {
-        range: [pointStartCollection + window.innerHeight * .5, pointStartMuses + window.innerHeight -1],
+        range: [236, window.innerHeight * 2],
+        selector: '#dot-overview',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 1,
+        to: 8
+      },
+      {
+        range: [window.innerHeight * 2 - 1, pointStartCollection + window.innerHeight * .5],
+        selector: '#dot-overview',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 8,
+        to: 1
+      },
+      {
+        range: [pointStartCollection + window.innerHeight * .5, height],
+        selector: '#dot-overview',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 1px #fff'
+      },
+      // // dot-collection
+      {
+        range: [-1, window.innerHeight * 2],
         selector: '#dot-collection',
         type: 'change',
         style: 'box-shadow',
-        to: 'inset 0 0 0 8px #fff'
+        to: 'inset 0 0 0 1px #fff'
       },
       {
-        range: [pointStartMuses + window.innerHeight, pointStartFollow + window.innerHeight * .5 - 1],
+        range: [window.innerHeight * 2, pointStartCollection + window.innerHeight * .5],
+        selector: '#dot-collection',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 1,
+        to: 8
+      },
+      {
+        range: [pointStartCollection + window.innerHeight * .5 -1, pointStartMuses + window.innerHeight],
+        selector: '#dot-collection',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 8,
+        to: 1
+      },
+      {
+        range: [pointStartMuses + window.innerHeight, height],
+        selector: '#dot-collection',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 1px #fff'
+      },
+      // // dot-muses
+      {
+        range: [-1, pointStartCollection + window.innerHeight * .5],
         selector: '#dot-muses',
         type: 'change',
         style: 'box-shadow',
-        to: 'inset 0 0 0 8px #fff'
+        to: 'inset 0 0 0 1px #fff'
+      },
+      {
+        range: [pointStartCollection + window.innerHeight * .5, pointStartMuses + window.innerHeight],
+        selector: '#dot-muses',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 1,
+        to: 8
+      },
+      {
+        range: [pointStartMuses + window.innerHeight -1, pointStartFollow + window.innerHeight * .5],
+        selector: '#dot-muses',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 8,
+        to: 1
       },
       {
         range: [pointStartFollow + window.innerHeight * .5, height],
+        selector: '#dot-muses',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 1px #fff'
+      },
+      // // dot-follow
+      {
+        range: [-1, pointStartMuses + window.innerHeight],
         selector: '#dot-follow',
         type: 'change',
         style: 'box-shadow',
-        to: 'inset 0 0 0 8px #fff'
+        to: 'inset 0 0 0 1px #fff'
+      },
+      {
+        range: [pointStartMuses + window.innerHeight, pointStartFollow + window.innerHeight * .5],
+        selector: '#dot-follow',
+        type: 'boxShadowScale',
+        style: 'box-shadow',
+        from: 1,
+        to: 8
       }
-
     ]
   });
 
