@@ -1,7 +1,7 @@
-// var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 var express = require('express');
-// var fs = require('fs');
-// var morgan = require('morgan');
+var fs = require('fs');
+var morgan = require('morgan');
 var app = express();
 
 var port = process.env.PORT || 8080;
