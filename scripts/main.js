@@ -1,3 +1,57 @@
+// Subscribing
+$( '#subscribe-top' ).submit(function( event ) {
+  subscribe($(this));
+  event.preventDefault();
+});
+
+$( '#subscribe-bottom' ).submit(function( event ) {
+  subscribe($(this));
+  event.preventDefault();
+});
+
+function subscribe(form) {
+  $.ajax({
+    method: 'POST',
+    url: '/subscribe',
+    data: { email: form.children('input').val() }
+  });
+
+  $('.container-footer-subscribe-form').children('input').prop( "disabled", true ).val('Thanks for subscribing!');
+  $('.container-footer-subscribe-form').children('button').prop( "disabled", true );
+}
+
+// Footer's subscribe focus styling
+var clicking = false;
+
+$( ".container-footer-subscribe-form-button" ).mousedown(function() {
+  clicking = true;
+
+  $( ".container-footer-subscribe-form" ).css('background-color', '#ef636e');
+  $( ".container-footer-subscribe-form-button" ).css('color', '#ffffff');
+  $( ".container-footer-subscribe-form-input" ).css('color', '#ffffff');
+  $( ".container-footer-subscribe-form-input" ).addClass('white-placeholder');
+});
+
+$( ".container-footer-subscribe-form-button" ).mouseup(function() {
+  clicking = false;
+
+  $( ".container-footer-subscribe-form" ).css('background-color', '#ffffff');
+  $( ".container-footer-subscribe-form-button" ).css('color', '#ef636e');
+  $( ".container-footer-subscribe-form-input" ).css('color', '#000000');
+  $( ".container-footer-subscribe-form-input" ).removeClass('white-placeholder');
+});
+
+$( ".container-footer-subscribe-form-button" ).mousemove(function() {
+  if (!clicking) {
+    return;
+  } else {
+    $( ".container-footer-subscribe-form" ).css('background-color', '#ffffff');
+    $( ".container-footer-subscribe-form-button" ).css('color', '#ef636e');
+    $( ".container-footer-subscribe-form-input" ).css('color', '#000000');
+    $( ".container-footer-subscribe-form-input" ).removeClass('white-placeholder');
+  }
+});
+
 // Collection image viewer
 $( '.container-collection-images-image' ).on('click', function () {
   var img, imgPrev, imgNext;
@@ -68,38 +122,6 @@ var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Const
 if (isSafari) {
   $('#container-follow-link-text').css('top', '45%');
 }
-
-// Footer's subscribe focus styling
-var clicking = false;
-
-$( ".container-footer-subscribe-form-button" ).mousedown(function() {
-  clicking = true;
-
-  $( ".container-footer-subscribe-form" ).css('background-color', '#ef636e');
-  $( ".container-footer-subscribe-form-button" ).css('color', '#ffffff');
-  $( ".container-footer-subscribe-form-input" ).css('color', '#ffffff');
-  $( ".container-footer-subscribe-form-input" ).addClass('white-placeholder');
-});
-
-$( ".container-footer-subscribe-form-button" ).mouseup(function() {
-  clicking = false;
-
-  $( ".container-footer-subscribe-form" ).css('background-color', '#ffffff');
-  $( ".container-footer-subscribe-form-button" ).css('color', '#ef636e');
-  $( ".container-footer-subscribe-form-input" ).css('color', '#000000');
-  $( ".container-footer-subscribe-form-input" ).removeClass('white-placeholder');
-});
-
-$( ".container-footer-subscribe-form-button" ).mousemove(function() {
-  if (!clicking) {
-    return;
-  } else {
-    $( ".container-footer-subscribe-form" ).css('background-color', '#ffffff');
-    $( ".container-footer-subscribe-form-button" ).css('color', '#ef636e');
-    $( ".container-footer-subscribe-form-input" ).css('color', '#000000');
-    $( ".container-footer-subscribe-form-input" ).removeClass('white-placeholder');
-  }
-});
 
 // Special for desktop
 if (window.innerWidth >= 1280) {
