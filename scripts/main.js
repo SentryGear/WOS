@@ -10,14 +10,19 @@ $( '#subscribe-bottom' ).submit(function( event ) {
 });
 
 function subscribe(form) {
-  $.ajax({
-    method: 'POST',
-    url: '/subscribe',
-    data: { email: form.children('input').val() }
-  });
+  if (!form.children('input').val()) {
+    // Special for some versions of Safari
+    alert('Please enter your email');
+  } else {
+    $.ajax({
+      method: 'POST',
+      url: '/subscribe',
+      data: { email: form.children('input').val() }
+    });
 
-  $('.container-footer-subscribe-form').children('input').prop( "disabled", true ).val('Thanks for subscribing!');
-  $('.container-footer-subscribe-form').children('button').prop( "disabled", true );
+    $('.container-footer-subscribe-form').children('input').prop( "disabled", true ).val('Thanks for subscribing!');
+    $('.container-footer-subscribe-form').children('button').prop( "disabled", true );
+  }
 }
 
 // Footer's subscribe focus styling
