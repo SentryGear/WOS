@@ -928,6 +928,10 @@ body {
     }
   }
 
+  .slick-list {
+    overflow: initial !important;
+  }
+
   .container {
     position: relative;
     background-color: rgba(0,0,0,0);
@@ -1047,7 +1051,7 @@ body {
       max-width: none;
       margin: 100vh 0 0 20%;
       box-sizing: border-box;
-      padding: 145px 72.5px 145px 145px;
+      padding: 145px 72.5px 345px 145px;
 
       background-color: $blue;
 
@@ -1129,6 +1133,10 @@ body {
       &-title {
         color: $darkTitle;
         @include title;
+      }
+
+      #slider {
+        transition: transform .2s ease-out;
       }
     }
 
@@ -1298,7 +1306,7 @@ body {
 @media screen and (min-width: $s-desktop) and (max-width: $l-desktop - 1px) {
   .container {
     &-overview {
-      padding: 100px 50px 100px 100px;
+      padding: 100px 50px 300px 100px;
 
       &-portrait {
         margin-left: 50px;

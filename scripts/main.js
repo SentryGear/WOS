@@ -214,7 +214,7 @@ if (window.innerWidth >= 1280) {
     data.node.style[data.style] = scaledValueString;
   };
 
-  var choreographer = new Choreographer({
+  var choreographerS = new Choreographer({
     customFunctions: {
       boxShadowScale: boxShadowScale
     },
@@ -488,8 +488,35 @@ if (window.innerWidth >= 1280) {
   });
 
   window.addEventListener('scroll', function() {
-    choreographer.runAnimationsAt(window.pageYOffset);
+    choreographerS.runAnimationsAt(window.pageYOffset);
   });
+
+  var choreographerM = new Choreographer({
+    animations: [
+      {
+        range: [-1, window.innerWidth],
+        selector: '#slider',
+        type: 'scale',
+        style: 'transform:translateX',
+        from: 100,
+        to: -100,
+        unit: 'px'
+      }
+    ]
+  })
+
+  function mousemoveAnimations(e) {
+    choreographerM.runAnimationsAt(e.clientX);
+  }
+
+  $( '#slider' ).hover(
+    function() {
+      window.addEventListener('mousemove', mousemoveAnimations, true);
+    }, function() {
+      window.removeEventListener('mousemove', mousemoveAnimations, true);
+      $(this).css('transform', 'translateX(0px)');
+    }
+  );
 
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
