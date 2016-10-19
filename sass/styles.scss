@@ -160,10 +160,6 @@ body {
         font-size: 18px;
         letter-spacing: 1px;
         line-height: 25px;
-
-        &:nth-child(2) {
-          margin-top: 17px;
-        }
       }
     }
 
@@ -176,15 +172,15 @@ body {
 
       &-image {
         display: block;
-        height: 350px;
+        height: 375px;
         width: 250px;
         margin: 0 auto;
 
         background-blend-mode: multiply;
         background-color: $blue;
         background-image: url('../images/designer.jpg');
-        background-position-x: -42px;
-        background-size: 130%;
+        background-position: center;
+        background-size: cover;
       }
 
       &-description {
@@ -653,10 +649,6 @@ body {
           font-size: 36px;
           letter-spacing: 2px;
           line-height: 42px;
-
-          &:nth-child(2) {
-            margin-top: 30px;
-          }
         }
       }
 
@@ -665,7 +657,7 @@ body {
         margin: 60px auto 0 auto;
 
         &-image {
-          height: 434px;
+          height: 540px;
           width: 100%;
 
           background-blend-mode: normal;
@@ -1062,10 +1054,6 @@ body {
           font-size: 36px;
           letter-spacing: 2px;
           line-height: 42px;
-
-          &:nth-child(2) {
-            margin-top: .1em;
-          }
         }
       }
 
@@ -1073,7 +1061,7 @@ body {
         margin: 0 0 0 72.5px;
 
         &-image {
-          height: 434px;
+          height: 540px;
           width: 360px;
 
           background-position: center;
@@ -1314,7 +1302,7 @@ body {
         margin-left: 50px;
 
         &-image {
-          height: 324px;
+          height: 375px;
           width: 250px;
         }
       }

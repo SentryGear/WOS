@@ -306,7 +306,7 @@ if (window.innerWidth >= 1280) {
         range: [pointStartFollow, pointEndFollow],
         selector: '.container-follow',
         type: 'scale',
-        style: 'transform:translateY',
+        style: 'top',
         from: -(followPaddingTop + followHeight),
         to: 0,
         unit: 'px'
