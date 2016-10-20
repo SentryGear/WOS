@@ -501,10 +501,12 @@ body {
           cursor: pointer;
           border: 2px solid $socialBorder;
 
+          color: $light;
           font-family: HelveticaBold;
           font-size: 14px;
           letter-spacing: .9px;
           text-align: left;
+          text-decoration: none;
 
           transition: background .1s ease-in;
 
