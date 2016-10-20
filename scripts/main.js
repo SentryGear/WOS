@@ -105,25 +105,7 @@ $(document).ready(function(){
   });
 });
 
-var musesHeight = 900;
-
-// $( '.slider-slide-image' ).last().on('load', function () {
-//   if (window.innerWidth < 768) {
-//     $('.slider-slide-image').each( function() {
-//       var $img = $( this );
-//       $img.width() >= 270 && $img.width() <= 362 && $img.width( $img.width() * .575 );
-//     });
-//   };
-//
-//   if (window.innerWidth >= 1440) {
-//     musesHeight = 1108;
-//
-//     $('.slider-slide-image').each( function() {
-//       var $img = $( this );
-//       $img.width() >= 270 && $img.width() <= 362 && $img.width( $img.width() * 1.4 );
-//     });
-//   }
-// });
+var musesHeight = 1015;
 
 // Follow link vertical centring for Safari
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
