@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Facebook</title>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Facebook" fill="#FFFFFF">
-            <path d="M5.21239351,15.46334 L5.21239351,8.40976143 L7.57995422,8.40976143 L7.93446285,5.66085671 L5.21239351,5.66085671 L5.21239351,3.90585472 C5.21239351,3.10998338 5.433396,2.56762331 6.574665,2.56762331 L8.03029892,2.56698723 L8.03029892,0.108344799 C7.77855256,0.0748448413 6.91447311,0 5.90918389,0 C3.81047302,0 2.37363881,1.28105533 2.37363881,3.63361457 L2.37363881,5.66085671 L0,5.66085671 L0,8.40976143 L2.37363881,8.40976143 L2.37363881,15.46334 L5.21239351,15.46334 Z"></path>
-        </g>
-    </g>
-</svg>
+<svg width="9" height="16" viewBox="0 0 9 16" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M5.212 15.463V8.41H7.58l.354-2.75H5.212V3.907c0-.796.221-1.338 1.363-1.338l1.455-.001V.108A19.459 19.459 0 0 0 5.91 0c-2.1 0-3.536 1.281-3.536 3.634V5.66H0v2.75h2.374v7.053h2.838z" fill="#FFF" fill-rule="evenodd"/></svg>

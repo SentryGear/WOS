@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="37px" height="35px" viewBox="0 0 37 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>B7D46621-1102-4E48-AE71-E838B03B6CAF</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="NEW---ipad/wos-main-audio-on" transform="translate(-19.000000, -20.000000)">
-            <g id="audio-on-copy" transform="translate(14.000000, 14.000000)">
-                <g id="Group">
-                    <path d="M5.875,17.625 L5.875,29.375 L13.7083333,29.375 L23.5,39.1666667 L23.5,7.83333333 L13.7083333,17.625 L5.875,17.625 L5.875,17.625 Z M32.3125,23.5 C32.3125,20.03375 30.315,17.0570833 27.4166667,15.6079167 L27.4166667,31.3725 C30.315,29.9429167 32.3125,26.96625 32.3125,23.5 L32.3125,23.5 Z M27.4166667,6.32541667 L27.4166667,10.3595833 C33.07625,12.04375 37.2083333,17.2920833 37.2083333,23.5 C37.2083333,29.7079167 33.07625,34.95625 27.4166667,36.6404167 L27.4166667,40.6745833 C35.2695833,38.8925 41.125,31.8816667 41.125,23.5 C41.125,15.1183333 35.2695833,8.1075 27.4166667,6.32541667 L27.4166667,6.32541667 Z" id="Shape" fill="#FFFFFF"></path>
-                    <polygon id="Shape" points="0 0 47 0 47 47 0 47"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="37" height="35" viewBox="0 0 37 35" xmlns="http://www.w3.org/2000/svg"><title>B7D46621-1102-4E48-AE71-E838B03B6CAF</title><g fill="none" fill-rule="evenodd"><path d="M.875 11.625v11.75h7.833l9.792 9.792V1.833l-9.792 9.792H.875zM27.313 17.5c0-3.466-1.998-6.443-4.896-7.892v15.764a8.762 8.762 0 0 0 4.895-7.872zM22.416.325V4.36c5.66 1.684 9.791 6.932 9.791 13.14s-4.132 11.456-9.791 13.14v4.035c7.853-1.782 13.708-8.793 13.708-17.175 0-8.382-5.855-15.393-13.708-17.175z" fill="#FFF"/><path d="M-5-6h47v47H-5z"/></g></svg>

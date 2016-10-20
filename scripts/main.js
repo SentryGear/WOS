@@ -59,6 +59,8 @@ $( ".container-footer-subscribe-form-button" ).mousemove(function() {
 
 // Collection image viewer
 $( '.container-collection-images-image' ).on('click', function () {
+  $('.d-viewer').css('display', 'initial');
+
   var img, imgPrev, imgNext;
 
   function setImages(mainImg) {
@@ -85,6 +87,8 @@ $( '.container-collection-images-image' ).on('click', function () {
 });
 
 $( '.viewer-close' ).on('click', function () {
+  $('.d-viewer').css('display', 'none');
+  
   $('.viewer').animate({opacity: 0}, 200, function() {
     $(this).css('display', 'none');
   })
