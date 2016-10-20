@@ -39,6 +39,7 @@ gulp.task('modify:muses', function () {
   gulp.src('src/original/muses/*')
     .pipe(responsive({
       '*': {
+        width: 450,
         format: 'jpeg',
         rename: {
           extname: '.jpg'

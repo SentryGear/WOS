@@ -80,6 +80,8 @@ body {
   }
 
   &-image {
+    width: 200px;
+
     filter: grayscale(100%) brightness(61%);
     cursor: pointer;
   }
@@ -91,6 +93,7 @@ body {
     top: 50%;
 
     cursor: pointer;
+    outline: none;
 
     color: $light;
     font-family: PortraitCondensed;
@@ -98,6 +101,7 @@ body {
     letter-spacing: 2.1px;
     line-height: 31px;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
   }
 }
@@ -626,6 +630,10 @@ body {
 
 @media screen and (min-width: $s-tablet) and (max-width: $s-desktop - 1px) {
   .slider-slide {
+    &-image {
+      width: 325px;
+    }
+
     &-caption {
       font-size: 59px;
       letter-spacing: 3.8px;
@@ -902,7 +910,11 @@ body {
 @media screen and (min-width: $s-desktop) {
   .slider-slide {
     &-image {
+      width: 450px;
+
       filter: grayscale(100%) brightness(100%);
+
+      transition: filter .33s ease-out;
     }
 
     &-caption {
@@ -911,17 +923,17 @@ body {
       font-size: 94px;
       letter-spacing: 6px;
       line-height: 83px;
+
+      transition: filter .33s ease-out;
     }
 
     &:hover {
       .slider-slide-image {
-        filter: grayscale(100%) brightness(50%);
-        transition: filter .2s linear;
+        filter: grayscale(0%) brightness(50%);
       }
 
       .slider-slide-caption {
         visibility: visible;
-        transition: filter .2s linear;
       }
     }
   }
