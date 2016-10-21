@@ -72,6 +72,12 @@ body {
   align-items: center;
 }
 
+.slick-center {
+  a {
+    pointer-events: initial !important;
+  }
+}
+
 .slider-slide {
   position: relative;
 
@@ -92,6 +98,7 @@ body {
     left: 50%;
     top: 50%;
 
+    pointer-events: none;
     cursor: pointer;
     outline: none;
 
