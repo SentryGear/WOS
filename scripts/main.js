@@ -340,7 +340,7 @@ if (window.innerWidth >= 1280) {
       // Animaitons for navigation dots
       // dot-header
       {
-        range: [-1, window.innerHeight],
+        range: [-1, window.innerHeight + 1],
         selector: '#dot-header',
         type: 'change',
         style: 'box-shadow',
@@ -378,7 +378,7 @@ if (window.innerWidth >= 1280) {
         to: 8
       },
       {
-        range: [window.innerHeight * 2 - 1, pointStartCollection - window.innerHeight * .5],
+        range: [window.innerHeight * 2 - 1, pointStartCollection - window.innerHeight * .5 + 1],
         selector: '#dot-overview',
         type: 'change',
         style: 'box-shadow',
@@ -416,7 +416,7 @@ if (window.innerWidth >= 1280) {
         to: 8
       },
       {
-        range: [pointStartCollection + window.innerHeight * .5, pointStartMuses],
+        range: [pointStartCollection + window.innerHeight * .5 - 1, pointStartMuses + 1],
         selector: '#dot-collection',
         type: 'change',
         style: 'box-shadow',
@@ -454,7 +454,7 @@ if (window.innerWidth >= 1280) {
         to: 8
       },
       {
-        range: [pointStartMuses + window.innerHeight, pointStartMuses + musesHeight],
+        range: [pointStartMuses + window.innerHeight - 1, pointStartMuses + musesHeight + 1],
         selector: '#dot-muses',
         type: 'change',
         style: 'box-shadow',
