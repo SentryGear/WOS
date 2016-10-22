@@ -340,14 +340,14 @@ if (window.innerWidth >= 1280) {
       // Animaitons for navigation dots
       // dot-header
       {
-        range: [-1, 237],
+        range: [-1, window.innerHeight],
         selector: '#dot-header',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 8px #fff'
       },
       {
-        range: [236, window.innerHeight * 2],
+        range: [window.innerHeight, window.innerHeight * 2],
         selector: '#dot-header',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -361,16 +361,16 @@ if (window.innerWidth >= 1280) {
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
-      // // dot-overview
+      // dot-overview
       {
-        range: [-1, 236],
+        range: [-1, window.innerHeight],
         selector: '#dot-overview',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
       {
-        range: [236, window.innerHeight * 2],
+        range: [window.innerHeight, window.innerHeight * 2],
         selector: '#dot-overview',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -378,7 +378,14 @@ if (window.innerWidth >= 1280) {
         to: 8
       },
       {
-        range: [window.innerHeight * 2 - 1, pointStartCollection + window.innerHeight * .5],
+        range: [window.innerHeight * 2 - 1, pointStartCollection - window.innerHeight * .5],
+        selector: '#dot-overview',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 8px #fff'
+      },
+      {
+        range: [pointStartCollection - window.innerHeight * .5, pointStartCollection + window.innerHeight * .5],
         selector: '#dot-overview',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -392,16 +399,16 @@ if (window.innerWidth >= 1280) {
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
-      // // dot-collection
+      // dot-collection
       {
-        range: [-1, window.innerHeight * 2],
+        range: [-1, pointStartCollection - window.innerHeight * .5],
         selector: '#dot-collection',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
       {
-        range: [window.innerHeight * 2, pointStartCollection + window.innerHeight * .5],
+        range: [pointStartCollection - window.innerHeight * .5, pointStartCollection + window.innerHeight * .5],
         selector: '#dot-collection',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -409,7 +416,14 @@ if (window.innerWidth >= 1280) {
         to: 8
       },
       {
-        range: [pointStartCollection + window.innerHeight * .5 -1, pointStartMuses + window.innerHeight],
+        range: [pointStartCollection + window.innerHeight * .5, pointStartMuses],
+        selector: '#dot-collection',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 8px #fff'
+      },
+      {
+        range: [pointStartMuses, pointStartMuses + window.innerHeight],
         selector: '#dot-collection',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -423,16 +437,16 @@ if (window.innerWidth >= 1280) {
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
-      // // dot-muses
+      // dot-muses
       {
-        range: [-1, pointStartCollection + window.innerHeight * .5],
+        range: [-1, pointStartMuses],
         selector: '#dot-muses',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
       {
-        range: [pointStartCollection + window.innerHeight * .5, pointStartMuses + window.innerHeight],
+        range: [pointStartMuses, pointStartMuses + window.innerHeight],
         selector: '#dot-muses',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -440,7 +454,14 @@ if (window.innerWidth >= 1280) {
         to: 8
       },
       {
-        range: [pointStartMuses + window.innerHeight -1, pointStartFollow + window.innerHeight * .5],
+        range: [pointStartMuses + window.innerHeight, pointStartMuses + musesHeight],
+        selector: '#dot-muses',
+        type: 'change',
+        style: 'box-shadow',
+        to: 'inset 0 0 0 8px #fff'
+      },
+      {
+        range: [pointStartMuses + musesHeight, pointStartMuses + musesHeight + window.innerHeight],
         selector: '#dot-muses',
         type: 'boxShadowScale',
         style: 'box-shadow',
@@ -448,22 +469,22 @@ if (window.innerWidth >= 1280) {
         to: 1
       },
       {
-        range: [pointStartFollow + window.innerHeight * .5, height],
+        range: [pointStartMuses + musesHeight + window.innerHeight, height],
         selector: '#dot-muses',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
-      // // dot-follow
+      // dot-follow
       {
-        range: [-1, pointStartMuses + window.innerHeight],
+        range: [-1, pointStartMuses + musesHeight],
         selector: '#dot-follow',
         type: 'change',
         style: 'box-shadow',
         to: 'inset 0 0 0 1px #fff'
       },
       {
-        range: [pointStartMuses + window.innerHeight, pointStartFollow + window.innerHeight * .5],
+        range: [pointStartMuses + musesHeight, pointStartMuses + musesHeight + window.innerHeight],
         selector: '#dot-follow',
         type: 'boxShadowScale',
         style: 'box-shadow',
