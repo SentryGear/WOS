@@ -110,7 +110,7 @@ var musesHeight = 1015;
 // Follow link vertical centring for Safari
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
-if (isSafari || navigator.platform === 'MacIntel') {
+if (isSafari || (!isSafari && navigator.platform === 'MacIntel')) {
   $('#container-follow-link-text').css('top', '45%');
 }
 
@@ -335,6 +335,17 @@ if (window.innerWidth >= 1280) {
         type: 'change',
         style: 'filter',
         to: 'brightness(0.5)'
+      },
+
+      // Audio controller
+      {
+        range: [-1, 236],
+        selector: '.container-audio',
+        type: 'scale',
+        style: 'transform:translateY',
+        from: 14,
+        to: 237,
+        unit: 'px'
       },
 
       // Animaitons for navigation dots

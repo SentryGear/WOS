@@ -148,7 +148,6 @@ body {
   }
 
   &-header {
-    @include center;
     height: 100vh;
 
     background-image: url('../images/bg_photo.jpg');
@@ -984,7 +983,7 @@ body {
     &-audio {
       display: initial;
       z-index: 100;
-      position: fixed;
+      position: absolute;
       left: 14px;
       top: 14px;
 

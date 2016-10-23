@@ -4,15 +4,12 @@ function ssc_init() {
     var t = document.documentElement;
     var n = window.innerHeight;
     var r = e.scrollHeight;
-
     ssc_root = document.compatMode.indexOf("CSS") >= 0 ? t : e;
     ssc_activeElement = e;
     ssc_initdone = true;
-
-    if (top != self)
-        ssc_frame = true;
-
-    else if (r > n && (e.offsetHeight <= n || t.offsetHeight <= n)) {
+    if (top != self) {
+        ssc_frame = true
+    } else if (r > n && (e.offsetHeight <= n || t.offsetHeight <= n)) {
         ssc_root.style.height = "auto";
         if (ssc_root.offsetHeight <= n) {
             var i = document.createElement("div");
@@ -20,14 +17,13 @@ function ssc_init() {
             e.appendChild(i)
         }
     }
-
     if (!ssc_fixedback) {
         e.style.backgroundAttachment = "scroll";
         t.style.backgroundAttachment = "scroll"
     }
-
-    if (ssc_keyboardsupport)
-        ssc_addEvent("keydown", ssc_keydown);
+    if (ssc_keyboardsupport) {
+        ssc_addEvent("keydown", ssc_keydown)
+    }
 }
 
 function ssc_scrollArray(e, t, n, r) {
@@ -40,10 +36,9 @@ function ssc_scrollArray(e, t, n, r) {
         lastY: n < 0 ? .99 : -.99,
         start: +(new Date)
     });
-
-    if (ssc_pending)
-        return;
-
+    if (ssc_pending) {
+        return
+    }
     var i = function () {
         var s = +(new Date);
         var o = 0;
@@ -81,13 +76,14 @@ function ssc_scrollArray(e, t, n, r) {
                 n = 0
             }
         }
-        if (!t && !n)
-            ssc_que = [];
-
-        if (ssc_que.length)
-            setTimeout(i, r / ssc_framerate + 1);
-        else
-            ssc_pending = false;
+        if (!t && !n) {
+            ssc_que = []
+        }
+        if (ssc_que.length) {
+            setTimeout(i, r / ssc_framerate + 1)
+        } else {
+            ssc_pending = false
+        }
     };
     setTimeout(i, 0);
     ssc_pending = true
@@ -104,15 +100,15 @@ function ssc_wheel(e) {
     }
     var r = e.wheelDeltaX || 0;
     var i = e.wheelDeltaY || 0;
-    if (!r && !i)
-        i = e.wheelDelta || 0;
-
-    if (Math.abs(r) > 1.2)
-        r *= ssc_stepsize / 300;
-
-    if (Math.abs(i) > 1.2)
-        i *= ssc_stepsize / 300;
-
+    if (!r && !i) {
+        i = e.wheelDelta || 0
+    }
+    if (Math.abs(r) > 1.2) {
+        r *= ssc_stepsize / 120
+    }
+    if (Math.abs(i) > 1.2) {
+        i *= ssc_stepsize / 120
+    }
     ssc_scrollArray(n, -r, -i);
     e.preventDefault()
 }
@@ -120,53 +116,51 @@ function ssc_wheel(e) {
 function ssc_keydown(e) {
     var t = e.target;
     var n = e.ctrlKey || e.altKey || e.metaKey;
-
-    if (/input|textarea|embed/i.test(t.nodeName) || t.isContentEditable || e.defaultPrevented || n)
-        return true;
-
-    if (ssc_isNodeName(t, "button") && e.keyCode === ssc_key.spacebar)
-        return true;
-
+    if (/input|textarea|embed/i.test(t.nodeName) || t.isContentEditable || e.defaultPrevented || n) {
+        return true
+    }
+    if (ssc_isNodeName(t, "button") && e.keyCode === ssc_key.spacebar) {
+        return true
+    }
     var r, i = 0,
         s = 0;
     var o = ssc_overflowingAncestor(ssc_activeElement);
     var u = o.clientHeight;
-
-    if (o == document.body)
-        u = window.innerHeight;
-
+    if (o == document.body) {
+        u = window.innerHeight
+    }
     switch (e.keyCode) {
-        case ssc_key.up:
-            s = -ssc_arrowscroll;
-            break;
-        case ssc_key.down:
-            s = ssc_arrowscroll;
-            break;
-        case ssc_key.spacebar:
-            r = e.shiftKey ? 1 : -1;
-            s = -r * u * .9;
-            break;
-        case ssc_key.pageup:
-            s = -u * .9;
-            break;
-        case ssc_key.pagedown:
-            s = u * .9;
-            break;
-        case ssc_key.home:
-            s = -o.scrollTop;
-            break;
-        case ssc_key.end:
-            var a = o.scrollHeight - o.scrollTop - u;
-            s = a > 0 ? a + 10 : 0;
-            break;
-        case ssc_key.left:
-            i = -ssc_arrowscroll;
-            break;
-        case ssc_key.right:
-            i = ssc_arrowscroll;
-            break;
-        default:
-            return true
+    case ssc_key.up:
+        s = -ssc_arrowscroll;
+        break;
+    case ssc_key.down:
+        s = ssc_arrowscroll;
+        break;
+    case ssc_key.spacebar:
+        r = e.shiftKey ? 1 : -1;
+        s = -r * u * .9;
+        break;
+    case ssc_key.pageup:
+        s = -u * .9;
+        break;
+    case ssc_key.pagedown:
+        s = u * .9;
+        break;
+    case ssc_key.home:
+        s = -o.scrollTop;
+        break;
+    case ssc_key.end:
+        var a = o.scrollHeight - o.scrollTop - u;
+        s = a > 0 ? a + 10 : 0;
+        break;
+    case ssc_key.left:
+        i = -ssc_arrowscroll;
+        break;
+    case ssc_key.right:
+        i = ssc_arrowscroll;
+        break;
+    default:
+        return true
     }
     ssc_scrollArray(o, i, s);
     e.preventDefault()
@@ -200,8 +194,7 @@ function ssc_overflowingAncestor(e) {
                 return ssc_setCache(t, e)
             }
         }
-    }
-    while (e = e.parentNode)
+    } while (e = e.parentNode)
 }
 
 function ssc_addEvent(e, t, n) {
@@ -250,7 +243,7 @@ function ssc_pulse(e) {
 }
 
 var ssc_framerate = 150;
-var ssc_animtime = 500;
+var ssc_animtime = 750;
 var ssc_stepsize = 150;
 var ssc_pulseAlgorithm = true;
 var ssc_pulseScale = 6;
@@ -262,6 +255,7 @@ var ssc_direction = {
     x: 0,
     y: 0
 };
+
 var ssc_initdone = false;
 var ssc_fixedback = true;
 var ssc_root = document.documentElement;
@@ -277,6 +271,7 @@ var ssc_key = {
     end: 35,
     home: 36
 };
+
 var ssc_que = [];
 var ssc_pending = false;
 var ssc_cache = {};
@@ -293,6 +288,7 @@ var ssc_uniqueID = function () {
 }();
 
 var ischrome = /chrome/.test(navigator.userAgent.toLowerCase());
+
 if (ischrome) {
     ssc_addEvent("mousedown", ssc_mousedown);
     ssc_addEvent("mousewheel", ssc_wheel);
