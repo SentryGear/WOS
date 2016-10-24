@@ -1,18 +1,8 @@
 {
   "name": "wos",
-  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SentryGear/WOS.git"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "fs": "0.0.1-security",
-    "morgan": "^1.7.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

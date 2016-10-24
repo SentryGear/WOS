@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 gulp.task('scripts', function () {
   gulp.src('scripts/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('public/vendor/scripts'));
+  .pipe(gulp.dest('vendor/scripts'));
 });
 
 gulp.task('styles', function () {
@@ -21,7 +21,7 @@ gulp.task('styles', function () {
     cascade: false
   }))
   .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('public/vendor/stylesheets'));
+  .pipe(gulp.dest('vendor/stylesheets'));
 });
 
 gulp.task('modify:collection', function () {
