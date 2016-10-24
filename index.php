@@ -20,8 +20,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WALK OF SHAME</title>
-  <link href="./vendor/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="./vendor/stylesheets/slick.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./public/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./public/stylesheets/slick.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 <script type="text/javascript">
   function scrollDown() {
@@ -35,7 +35,7 @@
 <body onload="scrollDown()">
   <div class="container" id="container">
     <div class="container-audio">
-      <img class="container-audio-icon" src="./vendor/images/audio-off.svg" />
+      <img class="container-audio-icon" src="./public/images/audio-off.svg" />
     </div>
 
     <nav class="container-nav">
@@ -65,15 +65,15 @@
         <div class="container-footer-follow-title">FOLLOW US</div>
         <div class="container-footer-follow-blocks">
           <a href="https://www.instagram.com/walkofshamemoscow/" target="_blank" class="container-footer-follow-blocks-block">
-            <img class="container-footer-follow-blocks-block-icon" src="./vendor/images/insta.svg" />
+            <img class="container-footer-follow-blocks-block-icon" src="./public/images/insta.svg" />
             <span class="container-footer-follow-blocks-block-text">INSTAGRAM</span>
           </a>
           <a href="https://www.facebook.com/walkofshamemoscow/" target="_blank" class="container-footer-follow-blocks-block">
-            <img class="container-footer-follow-blocks-block-icon" src="./vendor/images/fb.svg" />
+            <img class="container-footer-follow-blocks-block-icon" src="./public/images/fb.svg" />
             <span class="container-footer-follow-blocks-block-text">FACEBOOK</span>
           </a>
           <a href="http://walkofshamemoscow.tumblr.com/" target="_blank" class="container-footer-follow-blocks-block">
-            <img class="container-footer-follow-blocks-block-icon" src="./vendor/images/tumblr.svg" />
+            <img class="container-footer-follow-blocks-block-icon" src="./public/images/tumblr.svg" />
             <span class="container-footer-follow-blocks-block-text">TUMBLR</span>
           </a>
         </div>
@@ -104,36 +104,36 @@
     <div class="container-collection" id="container-collection">
       <div class="container-collection-title" id="container-collection-title">COLLECTION AW 2017</div>
       <div class="container-collection-images">
-        <img class="container-collection-images-image" src="./vendor/images/collection/1.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/2.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/3.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/4.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/5.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/6.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/7.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/8.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/9.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/10.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/11.jpg" />
-        <img class="container-collection-images-image" src="./vendor/images/collection/12.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/1.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/2.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/3.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/4.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/5.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/6.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/7.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/8.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/9.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/10.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/11.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/12.jpg" />
 
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/13.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/14.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/15.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/16.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/17.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/18.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/19.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/20.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/21.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/22.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/23.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/24.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/25.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/26.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/27.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/28.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./vendor/images/collection/29.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/13.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/14.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/15.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/16.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/17.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/18.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/19.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/20.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/21.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/22.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/23.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/24.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/25.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/26.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/27.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/28.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/29.jpg" />
       </div>
     </div>
 
@@ -142,55 +142,55 @@
       <div class="container-muses-title">MUSES</div>
       <div id="slider">
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/natasha goldenberg.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/natasha goldenberg.jpg" />
           <a href="https://www.instagram.com/ngoldenberg/" target="_blank" class="slider-slide-caption">natasha goldenberg</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/avdotja alexandrova.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/avdotja alexandrova.jpg" />
           <a href="https://www.instagram.com/vidunja/" target="_blank" class="slider-slide-caption">avdotja alexandrova</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/raveena aurora.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/raveena aurora.jpg" />
           <a href="https://www.instagram.com/raveenaaurora/" target="_blank" class="slider-slide-caption">raveena aurora</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/leandra medine.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/leandra medine.jpg" />
           <a href="https://www.instagram.com/leandramedine/" target="_blank" class="slider-slide-caption">leandra medine</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/elle faning.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/elle faning.jpg" />
           <a href="https://www.instagram.com/ellefanning/" target="_blank" class="slider-slide-caption">elle faning</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/lena perminova.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/lena perminova.jpg" />
           <a href="https://www.instagram.com/lenaperminova/" target="_blank" class="slider-slide-caption">lena perminova</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/matilda shnurova.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/matilda shnurova.jpg" />
           <a href="https://www.instagram.com/mshnurova/" target="_blank" class="slider-slide-caption">matilda shnurova</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/kacy hill.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/kacy hill.jpg" />
           <a href="https://www.instagram.com/kacyhill/" target="_blank" class="slider-slide-caption">kacy hill</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/cleo wade.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/cleo wade.jpg" />
           <a href="https://www.instagram.com/cleowade/" target="_blank" class="slider-slide-caption">cleo wade</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/lilit rashoyan.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/lilit rashoyan.jpg" />
           <a href="https://www.instagram.com/ah_lilit/" target="_blank" class="slider-slide-caption">lilit rashoyan</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/mia moretti.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/mia moretti.jpg" />
           <a href="https://www.instagram.com/miamoretti/" target="_blank" class="slider-slide-caption">mia moretti</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/rihanna.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/rihanna.jpg" />
           <a href="https://www.instagram.com/badgalriri/" target="_blank" class="slider-slide-caption">rihanna</a>
         </div>
         <div class="slider-slide">
-          <img class="slider-slide-image" src="./vendor/images/muses/olga karput.jpg" />
+          <img class="slider-slide-image" src="./public/images/muses/olga karput.jpg" />
           <a href="https://www.instagram.com/okarput/" target="_blank" class="slider-slide-caption">olga karput</a>
         </div>
       </div>
@@ -312,15 +312,15 @@
         <div class="container-footer-follow-title">FOLLOW US</div>
         <div class="container-footer-follow-blocks">
           <a href="https://www.instagram.com/walkofshamemoscow/" target="_blank" class="container-footer-follow-blocks-block">
-            <img class="container-footer-follow-blocks-block-icon" src="./vendor/images/insta.svg" />
+            <img class="container-footer-follow-blocks-block-icon" src="./public/images/insta.svg" />
             <span class="container-footer-follow-blocks-block-text">INSTAGRAM</span>
           </a>
           <a href="https://www.facebook.com/walkofshamemoscow/" target="_blank" class="container-footer-follow-blocks-block">
-            <img class="container-footer-follow-blocks-block-icon" src="./vendor/images/fb.svg" />
+            <img class="container-footer-follow-blocks-block-icon" src="./public/images/fb.svg" />
             <span class="container-footer-follow-blocks-block-text">FACEBOOK</span>
           </a>
           <a href="http://walkofshamemoscow.tumblr.com/" target="_blank" class="container-footer-follow-blocks-block">
-            <img class="container-footer-follow-blocks-block-icon" src="./vendor/images/tumblr.svg" />
+            <img class="container-footer-follow-blocks-block-icon" src="./public/images/tumblr.svg" />
             <span class="container-footer-follow-blocks-block-text">TUMBLR</span>
           </a>
         </div>
@@ -330,9 +330,9 @@
   </div>
 
   <div class="viewer">
-    <img class="viewer-close" src="./vendor/images/close.svg" />
-    <img class="viewer-arrow left" src="./vendor/images/arrow.svg" />
-    <img class="viewer-arrow right" src="./vendor/images/arrow.svg" />
+    <img class="viewer-close" src="./public/images/close.svg" />
+    <img class="viewer-arrow left" src="./public/images/arrow.svg" />
+    <img class="viewer-arrow right" src="./public/images/arrow.svg" />
 
     <div class="viewer-images">
       <img class="viewer-images-image left">
@@ -341,9 +341,9 @@
     </div>
   </div>
 </body>
-<script src="./vendor/scripts/jquery.min.js"></script>
-<script src="./vendor/scripts/slick.min.js"></script>
-<script src="./vendor/scripts/choreographer.min.js"></script>
-<!-- <script src="./vendor/scripts/scroll.js"></script> -->
-<script src="./vendor/scripts/main.js"></script>
+<script src="./public/scripts/jquery.min.js"></script>
+<script src="./public/scripts/slick.min.js"></script>
+<script src="./public/scripts/choreographer.min.js"></script>
+<!-- <script src="./public/scripts/scroll.js"></script> -->
+<script src="./public/scripts/main.js"></script>
 </html>
