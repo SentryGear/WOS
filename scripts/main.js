@@ -110,7 +110,7 @@ var musesHeight = 1015;
 // Follow link vertical centring for Safari
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
-if (isSafari || (!isSafari && navigator.platform === 'MacIntel')) {
+if (isSafari || navigator.platform === 'MacIntel') {
   $('#container-follow-link-text').css('top', '45%');
 }
 
