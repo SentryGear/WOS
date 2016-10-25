@@ -94,18 +94,18 @@ if (window.innerWidth >= 1280) {
   $( '.container-audio-icon' ).on('click', function () {
     if (isAudioOn) {
       isAudioOn = false;
-      $(this).attr('src', '../vendor/images/audio-off.svg');
+      $(this).attr('src', '../public/images/audio-off.svg');
 
       if (isAudio) {
         $( '.container-audioplayer' ).trigger('pause');
       }
     } else {
       isAudioOn = true;
-      $(this).attr('src', '../vendor/images/audio-on.svg');
+      $(this).attr('src', '../public/images/audio-on.svg');
 
       if (!isAudio) {
         isAudio = true;
-        $( '.container' ).append('<audio autoplay loop class="container-audioplayer"><source src="./vendor/audio/wos-audio.mp3" type="audio/mpeg"></audio>');
+        $( '.container' ).append('<audio autoplay loop class="container-audioplayer"><source src="./public/audio/wos-audio.mp3" type="audio/mpeg"></audio>');
       } else {
         $( '.container-audioplayer' ).trigger('play');
       }
