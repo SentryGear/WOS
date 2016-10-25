@@ -344,6 +344,5 @@
 <script src="./public/scripts/jquery.min.js"></script>
 <script src="./public/scripts/slick.min.js"></script>
 <script src="./public/scripts/choreographer.min.js"></script>
-<!-- <script src="./public/scripts/scroll.js"></script> -->
 <script src="./public/scripts/main.js"></script>
 </html>

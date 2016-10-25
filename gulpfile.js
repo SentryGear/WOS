@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 gulp.task('scripts', function () {
   gulp.src('scripts/*.js')
   .pipe(uglify())
-  .pipe(gulp.dest('vendor/scripts'));
+  .pipe(gulp.dest('public/scripts'));
 });
 
 gulp.task('styles', function () {
@@ -21,32 +21,7 @@ gulp.task('styles', function () {
     cascade: false
   }))
   .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('vendor/stylesheets'));
-});
-
-gulp.task('modify:collection', function () {
-  gulp.src('src/original/collection/*')
-    .pipe(responsive({
-      '*': {
-        height: 1920,
-        format: 'jpeg'
-      }
-    }))
-    .pipe(gulp.dest('src/modified/collection'));
-});
-
-gulp.task('modify:muses', function () {
-  gulp.src('src/original/muses/*')
-    .pipe(responsive({
-      '*': {
-        width: 450,
-        format: 'jpeg',
-        rename: {
-          extname: '.jpg'
-        }
-      }
-    }))
-    .pipe(gulp.dest('src/modified/muses'));
+  .pipe(gulp.dest('public/stylesheets'));
 });
 
 gulp.task('watch', function () {
