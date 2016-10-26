@@ -10,7 +10,7 @@
 // Media queries breakpoints
 $s-tablet  : 768px;
 $l-tablet  : 1024px;
-$s-desktop : 1280px;
+$s-desktop : 1100px;
 $m-desktop : 1440px;
 $l-desktop : 1680px;
 
@@ -1350,6 +1350,10 @@ body {
           }
         }
       }
+    }
+
+    &-footer {
+      max-width: 1000px;
     }
   }
 }
