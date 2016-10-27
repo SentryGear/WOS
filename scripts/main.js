@@ -1,3 +1,5 @@
+console.log(platform);
+
 // Footer's subscribe focus styling
 var clicking = false;
 
@@ -113,9 +115,7 @@ $(document).ready(function(){
 var musesHeight = 1015;
 
 // Follow link vertical centring for Safari
-var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-
-if (isSafari || navigator.platform === 'MacIntel') {
+if ((platform.os.family === 'OS X' && platform.name === 'Chrome') || (platform.os.family === 'iOS' && platform.name === 'Safari' && (platform.product === 'iPad' || platform.product === 'iPhone'))) {
   $('#container-follow-link-text').css('top', '45%');
 }
 
