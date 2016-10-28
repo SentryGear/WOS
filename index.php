@@ -88,15 +88,11 @@
     <div id="anchor-overview"></div>
     <div class="container-overview" id="container-overview">
       <div class="container-overview-text">
-        <p><span class="container-overview-person">Walk of Shame</span> was founded in 2011 by designer Andrey Artyomov.</p>
-        <p>Brand name is inspired by the times when Moscow was undergoing an explosion of nightlife and music culture, Idle Conversation throwing legendary parties and founding the online magazine, LAM, as well as producing a pilot Russian version of the cult publication, Dazed, which Andrey also worked on. Back in those days, summer nights were sure to lead either to the dance floor at Solyanka, or out somewhere on the rooftops of Moscow. In this sense, Walk of Shame is dedicated to the raucous youth of Andrey and his friends. The designer finds his inspiration in his school years in Ufa, the endless Moscow revelries at the end of the 2000s, and the DJ sets of famous friends.</p>
-        <p>One of the immediate hits was a jumper modeled after Princess Diana's, imprinted with I’M A LUXURY words. From season to season, the collections have featured variations on the theme of different WOS slip dresses, bathrobe fur coats, oversized bomber jackets and jeans classically tailored but cut from unexpected fabrics, such as thick silk. Loyal clientele and muses of the brand include Natasha Goldenburg, Leandra Medin (Man Repeller), Elle Fanning and Rihanna, among others. <span class="container-overview-person">Walk Of Shame</span> is daily-wear for those girls for whom life always has room for a good time.</p>
-        <p>Surrounded by talented friends, Andrey has always incorporated young, talented designers, photographers and directors into the process of creating the brand’s image. From the very first collection, WOS Moscow’s look books have been shot by Alexey Kiselev, with promotional clips and films produced by Avdotya Alexandrova.</p>
-        <p>A favorite of It Girls in Moscow and abroad, Walk Of Shame is a bestseller in many famous edgy stores. Today Walk of Shame works with the finest retail partners all over the world: Selfridges and Browns (London), Galeries Lafayette (Paris), TSUM and KM20 (Moscow), Rare Market (Seoul) and many more.</p>
+        <p><span class="container-overview-special">Walk of Shame</span> is a brand founded in 2011 by designer <span class="container-overview-special">Andrey Artyomov</span>. Collections capture the spirit of easy-going Moscow rooftops summer nights, raves and grunge of 90-s, freedom and abundance of 2000-s - dedication to the raucous youth of Andrey and his friends. Inspiration comes from his school years in Ufa, endless Moscow revelries, and the DJ sets of famous friends. Each season collections feature variations signature pieces: slip dresses, bathrobe fur coats, oversized bomber jackets and high quality denim. WOS loyal clientele and muses include Natasha Goldenberg, Leandra Medine (Man Repeller), Elle Fanning and Rihanna.</p>
       </div>
       <div class="container-overview-portrait">
         <div class="container-overview-portrait-image" id="container-overview-portrait-image"></div>
-        <div class="container-overview-portrait-description">ANDREI ARTEMOV</div>
+        <div class="container-overview-portrait-description">ANDREY ARTYOMOV</div>
       </div>
     </div>
 
@@ -159,7 +155,7 @@
         </div>
         <div class="slider-slide">
           <img class="slider-slide-image" src="./public/images/muses/elle faning.jpg" />
-          <a href="https://www.instagram.com/ellefanning/" target="_blank" class="slider-slide-caption">elle faning</a>
+          <a href="https://www.instagram.com/ellefanning/" target="_blank" class="slider-slide-caption">elle fanning</a>
         </div>
         <div class="slider-slide">
           <img class="slider-slide-image" src="./public/images/muses/lena perminova.jpg" />
@@ -211,7 +207,7 @@
             <h6>MOSCOW</h6>
             <p>TSUM</p>
             <p>KM-20</p>
-            <h6>ST.PETERBURG</h6>
+            <h6>ST. PETERSBURG</h6>
             <p>BABOCHKA GALLERY</p>
             <p>AU PONT ROUGE</p>
             <h6>YAROSLAVL</h6>
@@ -236,7 +232,7 @@
             <p>ALINE</p>
             <h6>TBILISI, GE</h6>
             <p>MORE IS LOVE</p>
-            <h6>KIEV, UK</h6>
+            <h6>KIEV, UA</h6>
             <p>ASHTIK</p>
             <p>FASHION CLUB</p>
           </div>
@@ -261,12 +257,12 @@
           <div class="container-stores-zones-zone-list">
             <h6>TOKYO, JP</h6>
             <p>RESTIRE</p>
-            <h6>SEUL, KR</h6>
+            <h6>SEOUL, KR</h6>
             <p>RARE MARKET</p>
             <p>TOM GREYHOUND</p>
             <h6>TAIPEI, TW</h6>
             <p>CLASH</p>
-            <h6>PEKIN, CH</h6>
+            <h6>BEIJING, CN</h6>
             <p>HIRMOSO</p>
           </div>
         </div>
@@ -325,7 +321,7 @@
           </a>
         </div>
       </div>
-      <div class="container-footer-copy">COPYRIGHT &copy; 2016 WALK OF SHAME MOSCOW</div>
+      <div class="container-footer-copy">designed by <a href="http://wednesday.co/" target="_blank">wednesday co</a></div>
     </div>
   </div>
 
