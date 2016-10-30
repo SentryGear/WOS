@@ -1,5 +1,3 @@
-console.log(platform);
-
 // Footer's subscribe focus styling
 var clicking = false;
 
@@ -121,26 +119,20 @@ if ((platform.os.family === 'OS X' && platform.name === 'Chrome') || (platform.o
 
 // Special for desktop
 if (window.innerWidth >= 1100) {
-  var isAudio = false;
-  var isAudioOn = false;
+  var isAudioPlaing = true;
+
+  $( '.container' ).append('<audio autoplay loop class="container-audioplayer"><source src="./public/audio/wos-audio.mp3" type="audio/mpeg"></audio>');
+  $( '.container-audio-icon' ).attr('src', './public/images/audio-on.svg');
+
   $( '.container-audio-icon' ).on('click', function () {
-    if (isAudioOn) {
-      isAudioOn = false;
-      $(this).attr('src', '../public/images/audio-off.svg');
-
-      if (isAudio) {
-        $( '.container-audioplayer' ).trigger('pause');
-      }
+    if (isAudioPlaing) {
+      isAudioPlaing = false;
+      $(this).attr('src', './public/images/audio-off.svg');
+      $( '.container-audioplayer' ).trigger('pause');
     } else {
-      isAudioOn = true;
-      $(this).attr('src', '../public/images/audio-on.svg');
-
-      if (!isAudio) {
-        isAudio = true;
-        $( '.container' ).append('<audio autoplay loop class="container-audioplayer"><source src="./public/audio/wos-audio.mp3" type="audio/mpeg"></audio>');
-      } else {
-        $( '.container-audioplayer' ).trigger('play');
-      }
+      isAudioPlaing = true;
+      $(this).attr('src', './public/images/audio-on.svg');
+      $( '.container-audioplayer' ).trigger('play');
     }
   });
 
