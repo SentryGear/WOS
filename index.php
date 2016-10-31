@@ -135,7 +135,7 @@
 
     <div id="anchor-muses"></div>
     <div class="container-muses" id="container-muses">
-      <div class="container-muses-title">MUSES</div>
+      <div class="container-muses-title">WHO WEARS IT</div>
       <div id="slider">
         <div class="slider-slide">
           <img class="slider-slide-image" src="./public/images/muses/natasha goldenberg.jpg" />
@@ -321,7 +321,7 @@
           </a>
         </div>
       </div>
-      <div class="container-footer-copy">designed by <a href="http://wednesday.co/" target="_blank">wednesday co</a></div>
+      <div class="container-footer-copy">designed by <a href="http://wednesday.co/" target="_blank">wednesday</a></div>
     </div>
   </div>
 
@@ -338,6 +338,7 @@
   </div>
 </body>
 <script src="./public/scripts/jquery.min.js"></script>
+<script src="./public/scripts/jquery.mousewheel.min.js"></script>
 <script src="./public/scripts/choreographer.min.js"></script>
 <script src="./public/scripts/platform.min.js"></script>
 <script src="./public/scripts/slick.min.js"></script>
