@@ -552,7 +552,6 @@ body {
       width: 225px;
       margin: 71px auto 0 auto;
 
-      color: #666;
       font-family: HelveticaBold;
       font-size: 14px;
       letter-spacing: 1px;
@@ -847,7 +846,10 @@ body {
         letter-spacing: .9px;
         line-height: 14px;
 
-        opacity: .36;
+        a {
+          margin-left: 5px;
+          color: inherit;
+        }
       }
 
       &-follow {
@@ -1351,7 +1353,9 @@ body {
         line-height: 14px;
         text-align: left;
 
-        opacity: .36;
+        a {
+          margin-left: 5px;
+        }
       }
 
       &-tcopy {

@@ -60,7 +60,6 @@
           <button class="container-footer-subscribe-form-button" type="submit" name="submit">SUBSCRIBE</button>
         </form>
       </div>
-      <div class="container-footer-tcopy">COPYRIGHT &copy; 2016 WALK OF SHAME MOSCOW</div>
       <div class="container-footer-follow">
         <div class="container-footer-follow-title">FOLLOW US</div>
         <div class="container-footer-follow-blocks">
@@ -303,7 +302,7 @@
           <button class="container-footer-subscribe-form-button" type="submit" name="submit">SUBSCRIBE</button>
         </form>
       </div>
-      <div class="container-footer-tcopy">COPYRIGHT &copy; 2016 WALK OF SHAME MOSCOW</div>
+      <div class="container-footer-tcopy">designed by <a href="http://wednesdaystudio.co/" target="_blank">wednesday</a></div>
       <div class="container-footer-follow">
         <div class="container-footer-follow-title">FOLLOW US</div>
         <div class="container-footer-follow-blocks">
