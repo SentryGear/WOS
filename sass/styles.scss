@@ -9,11 +9,12 @@
 @font-face { font-family: PortraitCondensed; src: url(../fonts/Portrait/PortraitCondWeb-Bold.ttf); }
 
 // Media queries breakpoints
-$s-tablet  : 768px;
-$l-tablet  : 1024px;
-$s-desktop : 1100px;
-$m-desktop : 1440px;
-$l-desktop : 1680px;
+$s-tablet   : 768px;
+$l-tablet   : 1024px;
+$s-desktop  : 1100px;
+$m-desktop  : 1440px;
+$l-desktop  : 1680px;
+$xl-desktop : 1920px;
 
 // Color palette
 $light : #ffffff;
@@ -170,11 +171,17 @@ body {
     margin: 62px auto 10px auto;
 
     &-text {
+      font-family: HelveticaBold;
+      font-size: calc(18px + (24-18) * (100vw - 320px) / (1680-320));
+
+      letter-spacing: 1px;
+
+      @media (min-width: 768px) {
+        letter-spacing: 2px;
+      }
+
       p {
-        font-family: HelveticaBold;
-        font-size: 18px;
-        letter-spacing: 1px;
-        line-height: 25px;
+        line-height: 1.2em;
       }
     }
 
@@ -673,15 +680,6 @@ body {
       max-width: none;
       margin: 145px 125px 0 125px;
 
-      &-text {
-        p {
-          font-family: HelveticaBold;
-          font-size: 36px;
-          letter-spacing: 2px;
-          line-height: 42px;
-        }
-      }
-
       &-portrait {
         width: 360px;
         margin: 60px auto 0 auto;
@@ -1085,14 +1083,6 @@ body {
 
       background-color: $blue;
 
-      &-text {
-        p {
-          font-size: 36px;
-          letter-spacing: 2px;
-          line-height: 42px;
-        }
-      }
-
       &-portrait {
         margin: 0 0 0 72.5px;
 
@@ -1348,20 +1338,6 @@ body {
 
 @media screen and (min-width: $s-desktop) and (max-width: $m-desktop - 1px) {
   .container {
-    &-overview {
-      &-text {
-        p {
-          font-size: 32px;
-          line-height: 1.25em;
-          letter-spacing: 1.25px;
-
-          &:nth-child(2) {
-            margin-top: .1em;
-          }
-        }
-      }
-    }
-
     &-footer {
       max-width: 1000px;
     }

@@ -321,7 +321,7 @@
           </a>
         </div>
       </div>
-      <div class="container-footer-copy">designed by <a href="http://wednesday.co/" target="_blank">wednesday</a></div>
+      <div class="container-footer-copy">designed by <a href="http://wednesdaystudio.co/" target="_blank">wednesday</a></div>
     </div>
   </div>
 
