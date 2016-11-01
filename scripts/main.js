@@ -106,7 +106,10 @@ $(document).ready(function(){
     centerMode: true,
     focusOnSelect: true,
     infinite: true,
-    variableWidth: true
+    variableWidth: true,
+    speed: 20000,
+    autoplay: true,
+    autoplaySpeed: 0
   });
   $('#slider').mousewheel(function(e) {
     e.preventDefault();
