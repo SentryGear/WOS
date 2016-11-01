@@ -100,17 +100,24 @@ $( '.viewer-close' ).on('click', function () {
 });
 
 // Muses slider configuration
+$( '.slider-slide-image' ).last().on('load', function () {
+  if (window.innerWidth >= 1100) {
+    $('.slider-slide-image').each( function() {
+      var $img = $( this );
+      $img.width( window.innerWidth / 4 );
+    });
+  }
+});
+
 $(document).ready(function(){
   $('#slider').slick({
     arrows: false,
     centerMode: true,
-    focusOnSelect: true,
     infinite: true,
-    variableWidth: true,
-    speed: 20000,
-    autoplay: true,
-    autoplaySpeed: 0
+    initialSlide: 6,
+    variableWidth: true
   });
+
   $('#slider').mousewheel(function(e) {
     e.preventDefault();
 

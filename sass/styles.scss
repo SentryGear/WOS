@@ -74,12 +74,6 @@ body {
   align-items: center;
 }
 
-.slick-center {
-  a {
-    pointer-events: initial !important;
-  }
-}
-
 .slider-slide {
   position: relative;
 
@@ -100,7 +94,6 @@ body {
     left: 50%;
     top: 50%;
 
-    pointer-events: none;
     cursor: pointer;
     outline: none;
 
@@ -176,7 +169,7 @@ body {
 
       letter-spacing: 1px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1100px) {
         letter-spacing: 2px;
       }
 
@@ -936,9 +929,9 @@ body {
     &-caption {
       visibility: hidden;
 
-      font-size: 94px;
-      letter-spacing: 6px;
-      line-height: 83px;
+      font-size: calc(50px + (100-50) * (100vw - 1100px) / (1680-1100));
+      letter-spacing: calc(3px + (6-3) * (100vw - 1100px) / (1680-1100));;
+      line-height: 1em;
 
       transition: filter .33s ease-out;
     }

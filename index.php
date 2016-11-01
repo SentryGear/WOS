@@ -138,6 +138,30 @@
       <div class="container-muses-title">WHO WEARS IT</div>
       <div id="slider">
         <div class="slider-slide">
+          <img class="slider-slide-image" src="./public/images/muses/kacy hill.jpg" />
+          <a href="https://www.instagram.com/kacyhill/" target="_blank" class="slider-slide-caption">kacy hill</a>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="./public/images/muses/cleo wade.jpg" />
+          <a href="https://www.instagram.com/cleowade/" target="_blank" class="slider-slide-caption">cleo wade</a>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="./public/images/muses/lilit rashoyan.jpg" />
+          <a href="https://www.instagram.com/ah_lilit/" target="_blank" class="slider-slide-caption">lilit rashoyan</a>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="./public/images/muses/mia moretti.jpg" />
+          <a href="https://www.instagram.com/miamoretti/" target="_blank" class="slider-slide-caption">mia moretti</a>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="./public/images/muses/rihanna.jpg" />
+          <a href="https://www.instagram.com/badgalriri/" target="_blank" class="slider-slide-caption">rihanna</a>
+        </div>
+        <div class="slider-slide">
+          <img class="slider-slide-image" src="./public/images/muses/olga karput.jpg" />
+          <a href="https://www.instagram.com/okarput/" target="_blank" class="slider-slide-caption">olga karput</a>
+        </div>
+        <div class="slider-slide">
           <img class="slider-slide-image" src="./public/images/muses/natasha goldenberg.jpg" />
           <a href="https://www.instagram.com/ngoldenberg/" target="_blank" class="slider-slide-caption">natasha goldenberg</a>
         </div>
@@ -164,30 +188,6 @@
         <div class="slider-slide">
           <img class="slider-slide-image" src="./public/images/muses/matilda shnurova.jpg" />
           <a href="https://www.instagram.com/mshnurova/" target="_blank" class="slider-slide-caption">matilda shnurova</a>
-        </div>
-        <div class="slider-slide">
-          <img class="slider-slide-image" src="./public/images/muses/kacy hill.jpg" />
-          <a href="https://www.instagram.com/kacyhill/" target="_blank" class="slider-slide-caption">kacy hill</a>
-        </div>
-        <div class="slider-slide">
-          <img class="slider-slide-image" src="./public/images/muses/cleo wade.jpg" />
-          <a href="https://www.instagram.com/cleowade/" target="_blank" class="slider-slide-caption">cleo wade</a>
-        </div>
-        <div class="slider-slide">
-          <img class="slider-slide-image" src="./public/images/muses/lilit rashoyan.jpg" />
-          <a href="https://www.instagram.com/ah_lilit/" target="_blank" class="slider-slide-caption">lilit rashoyan</a>
-        </div>
-        <div class="slider-slide">
-          <img class="slider-slide-image" src="./public/images/muses/mia moretti.jpg" />
-          <a href="https://www.instagram.com/miamoretti/" target="_blank" class="slider-slide-caption">mia moretti</a>
-        </div>
-        <div class="slider-slide">
-          <img class="slider-slide-image" src="./public/images/muses/rihanna.jpg" />
-          <a href="https://www.instagram.com/badgalriri/" target="_blank" class="slider-slide-caption">rihanna</a>
-        </div>
-        <div class="slider-slide">
-          <img class="slider-slide-image" src="./public/images/muses/olga karput.jpg" />
-          <a href="https://www.instagram.com/okarput/" target="_blank" class="slider-slide-caption">olga karput</a>
         </div>
       </div>
     </div>
