@@ -164,7 +164,7 @@ body {
 
     &-text {
       font-family: HelveticaBold;
-      font-size: calc(18px + (24-18) * (100vw - 320px) / (1680-320));
+      // font-size: calc(18px + (24-18) * (100vw - 320px) / (1680-320));
 
       letter-spacing: 1px;
 
@@ -930,8 +930,8 @@ body {
     &-caption {
       visibility: hidden;
 
-      font-size: calc(50px + (100-50) * (100vw - 1100px) / (1680-1100));
-      letter-spacing: calc(3px + (6-3) * (100vw - 1100px) / (1680-1100));;
+      // font-size: calc(50px + (100-50) * (100vw - 1100px) / (1680-1100));
+      // letter-spacing: calc(3px + (6-3) * (100vw - 1100px) / (1680-1100));
       line-height: 1em;
 
       transition: filter .33s ease-out;

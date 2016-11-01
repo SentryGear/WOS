@@ -132,6 +132,31 @@ $(document).ready(function(){
 
 var musesHeight = 1015;
 
+// Overview responsive typo
+function overviewResTypo() {
+  $( ".container-overview-text" ).css('font-size', 18 + (36 - 18) * (window.innerWidth - 320) / (1680 - 320) + 'px');
+}
+
+overviewResTypo();
+
+$( window ).on('resize', function () {
+  overviewResTypo();
+});
+
+// Muses responsive typo
+if (innerWidth >= 1100) {
+  function musesResTypo() {
+    $( ".slider-slide-caption" ).css('font-size', 50 + (100 - 50) * (window.innerWidth - 1100) / (1680 - 1100) + 'px');
+    $( ".slider-slide-caption" ).css('letter-spacing', 3 + (6 - 3) * (window.innerWidth - 1100) / (1680 - 1100) + 'px');
+  }
+
+  musesResTypo();
+
+  $( window ).on('resize', function () {
+    musesResTypo();
+  });
+}
+
 // Follow link vertical centring for Safari
 if ((platform.os.family === 'OS X' && platform.name === 'Chrome') || (platform.os.family === 'iOS' && platform.name === 'Safari' && (platform.product === 'iPad' || platform.product === 'iPhone'))) {
   $('#container-follow-link-text').css('top', '45%');
