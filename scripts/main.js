@@ -118,14 +118,14 @@ $(document).ready(function(){
     variableWidth: true
   });
 
-  $('#slider').mousewheel(function(e) {
+  $('.slider-slide-image').mousewheel(function(e) {
     e.preventDefault();
 
     if (e.deltaY < 0 || e.deltaX < 0) {
-      $(this).slick('slickNext');
+      $('#slider').slick('slickNext');
     }
     else {
-      $(this).slick('slickPrev');
+      $('#slider').slick('slickPrev');
     }
   });
 });
