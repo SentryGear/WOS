@@ -7,6 +7,18 @@ var responsive = require('gulp-responsive');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 
+gulp.task('images:share', function () {
+  gulp.src('src/share.*')
+    .pipe(responsive({
+      '*': {
+        height: 315,
+        width: 600,
+        format: 'jpeg'
+      }
+    }))
+    .pipe(gulp.dest('public/images'));
+});
+
 gulp.task('scripts', function () {
   gulp.src('scripts/*.js')
   .pipe(uglify())
