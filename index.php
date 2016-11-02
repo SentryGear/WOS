@@ -23,7 +23,7 @@
   <link href="./public/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="./public/stylesheets/slick.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-  <meta property="og:title" content="The Rock" />
+  <meta property="og:title" content="WALK OF SHAME" />
   <meta property="og:og:description" content="Walk of Shame is a brand founded in 2011 by designer Andrey Artyomov. Collections capture the spirit of easy-going Moscow rooftops summer nights, raves and grunge of 90-s, freedom and abundance of 2000-s - dedication to the raucous youth of Andrey and his friends. Inspiration comes from his school years in Ufa, endless Moscow revelries, and the DJ sets of famous friends. Each season collections feature variations signature pieces: slip dresses, bathrobe fur coats, oversized bomber jackets and high quality denim. WOS loyal clientele and muses include Natasha Goldenberg, Leandra Medine (Man Repeller), Elle Fanning and Rihanna." />
   <meta property="og:url" content="http://walkofshame.moscow/" />
   <meta property="og:image" content="./public/images/share.jpg" />
