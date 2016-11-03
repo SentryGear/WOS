@@ -128,6 +128,17 @@ $(document).ready(function(){
       $('#slider').slick('slickPrev');
     }
   });
+
+  $('.slider-slide-caption').mousewheel(function(e) {
+    e.preventDefault();
+
+    if (e.deltaY < 0 || e.deltaX < 0) {
+      $('#slider').slick('slickNext');
+    }
+    else {
+      $('#slider').slick('slickPrev');
+    }
+  });
 });
 
 var musesHeight = 1015;
