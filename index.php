@@ -105,36 +105,36 @@
     <div class="container-collection" id="container-collection">
       <div class="container-collection-title" id="container-collection-title">COLLECTION AW 2017</div>
       <div class="container-collection-images">
-        <img class="container-collection-images-image" src="./public/images/collection/1.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/2.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/3.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/4.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/5.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/6.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/7.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/8.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/9.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/10.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/11.jpg" />
-        <img class="container-collection-images-image" src="./public/images/collection/12.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/1.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/2.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/3.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/4.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/5.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/6.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/7.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/8.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/9.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/10.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/11.jpg" />
+        <img class="container-collection-images-image" src="./public/images/collection/thumbnails/12.jpg" />
 
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/13.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/14.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/15.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/16.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/17.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/18.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/19.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/20.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/21.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/22.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/23.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/24.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/25.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/26.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/27.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/28.jpg" />
-        <img class="container-collection-images-image d-viewer" src="./public/images/collection/29.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/13.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/14.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/15.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/16.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/17.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/18.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/19.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/20.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/21.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/22.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/23.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/24.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/25.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/26.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/27.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/28.jpg" />
+        <img class="container-collection-images-image d-viewer" src="./public/images/collection/thumbnails/29.jpg" />
       </div>
     </div>
 
