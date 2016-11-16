@@ -19,7 +19,7 @@
   <title>WALK OF SHAME</title>
   <link rel="icon" type="image/png" href="./public/images/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="./public/images/favicon-16x16.png" sizes="16x16" />
-  <link href="./public/stylesheets/build.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="./public/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -30,16 +30,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://walkofshame.moscow/" />
 </head>
-<script type="text/javascript">
-  function scrollDown() {
-    $( '#top-footer' ).css('visibility', 'visible');
-
-    if (window.innerWidth >= 1280) {
-      window.scrollTo(0,237);
-    }
-  }
-</script>
-<body onload="scrollDown()">
+<body>
   <div class="container" id="container">
     <div class="container-audio">
       <img class="container-audio-icon" src="./public/images/audio-off.svg" />
@@ -94,7 +85,7 @@
     <div id="anchor-overview"></div>
     <div class="container-overview" id="container-overview">
       <div class="container-overview-text">
-        <p><span class="container-overview-special">Walk of Shame</span> is a brand founded in 2011 by designer <span class="container-overview-special">Andrey Artyomov</span>. Collections capture the spirit of easy-going Moscow rooftops summer nights, raves and grunge of 90-s, freedom and abundance of 2000-s - dedication to the raucous youth of Andrey and his friends. Inspiration comes from his school years in Ufa, endless Moscow revelries, and the DJ sets of famous friends. Each season collections feature variations signature pieces: slip dresses, bathrobe fur coats, oversized bomber jackets and high quality denim. WOS loyal clientele and muses include Natasha Goldenberg, Leandra Medine (Man Repeller), Elle Fanning and Rihanna.</p>
+        <p><span class="container-overview-special">Walk of Shame</span> is a brand founded in 2011 by designer <span class="container-overview-special">Andrey Artyomov</span>. Collections capture the spirit of easy-going Moscow rooftops summer nights, raves and grunge of 90s, freedom and abundance of 2000s - dedication to the raucous youth of Andrey and his friends. Inspiration comes from his school years in Ufa, endless Moscow revelries, and the DJ sets of famous friends. Each season collections feature variations of signature pieces: slip dresses, bathrobe fur coats, oversized bomber jackets and high quality denim. WOS loyal clientele and muses include Natasha Goldenberg, Leandra Medine (Man Repeller), Elle Fanning and Rihanna.</p>
       </div>
       <div class="container-overview-portrait">
         <div class="container-overview-portrait-image" id="container-overview-portrait-image"></div>
@@ -104,7 +95,7 @@
 
     <div id="anchor-collection"></div>
     <div class="container-collection" id="container-collection">
-      <div class="container-collection-title" id="container-collection-title">COLLECTION AW 2017</div>
+      <div class="container-collection-title" id="container-collection-title">COLLECTION RESORT 2017</div>
       <div class="container-collection-images">
         <img class="container-collection-images-image" src="./public/images/collection/thumbnails/1.jpg" />
         <img class="container-collection-images-image" src="./public/images/collection/thumbnails/2.jpg" />
@@ -141,7 +132,7 @@
 
     <div id="anchor-muses"></div>
     <div class="container-muses" id="container-muses">
-      <div class="container-muses-title">WHO WEARS IT</div>
+      <div class="container-muses-title">WHO WEARS</div>
       <div id="slider">
         <div class="slider-slide">
           <img class="slider-slide-image" src="./public/images/muses/kacy hill.jpg" />

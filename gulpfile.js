@@ -3,7 +3,6 @@
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
-var concat = require('gulp-concat');
 var responsive = require('gulp-responsive');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
@@ -27,7 +26,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('styles', function () {
-  gulp.src('sass/*.scss')
+  gulp.src('sass/styles.scss')
   .pipe(sass())
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
@@ -37,15 +36,9 @@ gulp.task('styles', function () {
   .pipe(gulp.dest('public/stylesheets'));
 });
 
-gulp.task('concat:styles', function() {
-  return gulp.src(['public/stylesheets/slick.css', 'public/stylesheets/styles.css'])
-    .pipe(concat('build.css'))
-    .pipe(gulp.dest('public/stylesheets/'));
-});
-
 gulp.task('watch', function () {
   gulp.watch('scripts/*.js', ['scripts']);
-  gulp.watch('sass/*.scss', ['styles', 'concat:styles']);
+  gulp.watch('sass/*.scss', ['styles']);
 });
 
 gulp.task('default', ['scripts', 'styles', 'watch']);
