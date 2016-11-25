@@ -31,6 +31,10 @@
   <meta property="og:url" content="http://walkofshame.moscow/" />
 </head>
 <body>
+  <div class="loader">
+    <div class="loader-layer1"></div>
+    <div class="loader-layer2"></div>
+  </div>
   <div class="container" id="container">
     <div class="container-audio">
       <img class="container-audio-icon" src="./public/images/audio-off.svg" />
