@@ -968,7 +968,7 @@ body {
       z-index: -2;
       transform: translateX(-50%) translateY(-50%);
 
-      transition: filter 1s ease-in;
+      transition: filter .5s ease;
     }
 
     #top-footer {
@@ -988,7 +988,7 @@ body {
     &-audio {
       display: initial;
       z-index: 100;
-      position: absolute;
+      position: fixed;
       left: 14px;
       top: 14px;
 

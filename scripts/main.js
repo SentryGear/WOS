@@ -266,6 +266,17 @@ function renderContent() {
       boxShadowScale: boxShadowScale
     },
     animations: [
+      // Audio controller
+      {
+        range: [window.innerHeight, window.innerHeight + 60],
+        selector: '.container-audio',
+        type: 'scale',
+        style: 'top',
+        from: 14,
+        to: -46,
+        unit: 'px'
+      },
+
       // Header
       {
         range: [window.innerHeight, window.innerHeight * 1.75],
@@ -375,29 +386,11 @@ function renderContent() {
 
       // Fade video
       {
-        range: [-1, 236],
-        selector: '.container-video',
-        type: 'change',
-        style: 'filter',
-        to: 'brightness(0.5)'
-      },
-      {
         range: [window.innerHeight * 1.5, height],
         selector: '.container-video',
         type: 'change',
         style: 'filter',
         to: 'brightness(0.5)'
-      },
-
-      // Audio controller
-      {
-        range: [-1, 236],
-        selector: '.container-audio',
-        type: 'scale',
-        style: 'transform:translateY',
-        from: 0,
-        to: 237,
-        unit: 'px'
       },
 
       // Animaitons for navigation dots
@@ -564,9 +557,11 @@ function renderContent() {
   $( window ).mousewheel(function(e) {
     if ((pageYOffset === 0) && (e.deltaY > 0)) {
       $( '.container-header-title' ).css('transform', 'translateY(237px)');
+      $( '.container-video' ).css('filter', 'brightness(0.5)');
       $( '#top-footer' ).css('transform', 'translateY(0px)');
     } else if ((pageYOffset === 0) && (e.deltaY < 0)) {
       $( '.container-header-title' ).css('transform', 'translateY(0px)');
+      $( '.container-video' ).css('filter', 'brightness(0.5)');
       $( '#top-footer' ).css('transform', 'translateY(-237px)');
     }
   });
