@@ -629,7 +629,7 @@ if (window.innerWidth >= 1100) {
   });
 
   function incrementLoader() {
-    var progressStatus = parseInt($( '.loader-layer2' ).css('width')) + window.innerWidth / 50;
+    var progressStatus = parseInt($( '.loader-layer2' ).css('width')) + window.innerWidth / 25;
     if (progressStatus >= window.innerWidth / 2) {
       clearInterval(progress);
     } else {
