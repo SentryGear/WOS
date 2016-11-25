@@ -268,15 +268,6 @@ function renderContent() {
     animations: [
       // Header
       {
-        range: [-1, 236],
-        selector: '.container-header-title',
-        type: 'scale',
-        style: 'transform:translateY',
-        from: 236,
-        to: 0,
-        unit: 'px'
-      },
-      {
         range: [window.innerHeight, window.innerHeight * 1.75],
         selector: '.container-header-title',
         type: 'scale',
@@ -570,6 +561,16 @@ function renderContent() {
     choreographerS.runAnimationsAt(window.pageYOffset);
   });
 
+  $( window ).mousewheel(function(e) {
+    if ((pageYOffset === 0) && (e.deltaY > 0)) {
+      $( '.container-header-title' ).css('transform', 'translateY(237px)');
+      $( '#top-footer' ).css('transform', 'translateY(0px)');
+    } else if ((pageYOffset === 0) && (e.deltaY < 0)) {
+      $( '.container-header-title' ).css('transform', 'translateY(0px)');
+      $( '#top-footer' ).css('transform', 'translateY(-237px)');
+    }
+  });
+
   var choreographerM = new Choreographer({
     animations: [
       {
@@ -615,10 +616,6 @@ function renderContent() {
 
 if (window.innerWidth >= 1100) {
   $( window ).on('load', function () {
-    window.scrollTo(0,237);
-
-    $( '#top-footer' ).css('visibility', 'visible');
-
     renderContent();
   });
 };
