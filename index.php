@@ -29,6 +29,48 @@
   <meta property="og:title" content="WALK OF SHAME" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://walkofshame.moscow/" />
+
+  <script src="./public/scripts/jquery.min.js"></script>
+  <script src="./public/scripts/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript">
+    if (window.innerWidth >= 1100) {
+      var loadStatus = false;
+
+      $( window ).mousewheel(function(e) {
+        if (!loadStatus) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      });
+
+      function incrementLoader() {
+        var progressStatus = parseInt($( '.loader-layer2' ).css('width')) + window.innerWidth / 25;
+        if (progressStatus >= window.innerWidth / 2) {
+          clearInterval(progress);
+        } else {
+          $( '.loader-layer2' ).css('width', progressStatus + 'px');
+        }
+      }
+
+      var progress = setInterval(incrementLoader, 1000);
+
+      $( window ).on('load', function () {
+        renderContent();
+        clearInterval(progress);
+
+        $( '.loader-layer2' ).animate({
+          width: '50vw'
+        }, 1000, function() {
+          $( '.loader' ).animate({
+            opacity: 0
+          }, 500, function() {
+            $( this ).css('display', 'none');
+            loadStatus = true;
+          });
+        });
+      });
+    };
+  </script>
 </head>
 <body>
   <div class="loader">
@@ -338,8 +380,6 @@
     </div>
   </div>
 </body>
-<script src="./public/scripts/jquery.min.js"></script>
-<script src="./public/scripts/jquery.mousewheel.min.js"></script>
 <script src="./public/scripts/choreographer.min.js"></script>
 <script src="./public/scripts/platform.min.js"></script>
 <script src="./public/scripts/slick.min.js"></script>
