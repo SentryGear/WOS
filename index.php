@@ -34,8 +34,6 @@
   <script src="./public/scripts/jquery.mousewheel.min.js"></script>
   <script type="text/javascript">
     if (window.innerWidth >= 1100) {
-      console.log('WINDOW IS OVER 1100PX');
-
       var loadStatus = false;
 
       $( window ).mousewheel(function(e) {
@@ -57,13 +55,9 @@
       var progress = setInterval(incrementLoader, 1000);
 
       $( window ).on('load', function () {
-        console.log('WINDOW IS LOADED');
-
         clearInterval(progress);
 
         function renderVideo() {
-          console.log('STARTING GENERATING VIDEO');
-
           var elVideo = document.createElement('video');
           var attrClass = document.createAttribute('class');
           // var attrPoster = document.createAttribute('poster');
@@ -87,8 +81,6 @@
           elVideo.appendChild(elSource)
 
           document.getElementById('container').appendChild(elVideo);
-
-          console.log('ENDING GENERATING VIDEO');
         }
 
         renderVideo();
@@ -96,20 +88,13 @@
         $( '.loader-layer2' ).animate({
           width: (window.innerWidth / 2) + 'px'
         }, 500, function() {
-          console.log('AT NOW PROGRESS MUST BE FULL');
-
           renderContent();
-
-          console.log('CONTENT IS RENDERED');
 
           $( '.loader' ).animate({
             opacity: 0
           }, 500, function() {
-            console.log('test - next is display:none to loader');
             $( this ).css('display', 'none');
             loadStatus = true;
-
-            console.log('FINAL');
           });
         });
       });
