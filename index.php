@@ -55,12 +55,42 @@
       var progress = setInterval(incrementLoader, 1000);
 
       $( window ).on('load', function () {
-        renderContent();
         clearInterval(progress);
 
+        function renderVideo() {
+          var elVideo = document.createElement('video');
+          var attrClass = document.createAttribute('class');
+          // var attrPoster = document.createAttribute('poster');
+          var attrAutoplay = document.createAttribute('autoplay');
+          var attrLoop = document.createAttribute('loop');
+
+          attrClass.value = 'container-video';
+          // attrPoster.value = './public/images/video-poster.jpg';
+
+          elVideo.setAttributeNode(attrClass);
+          // elVideo.setAttributeNode(attrPoster);
+          elVideo.setAttributeNode(attrAutoplay);
+          elVideo.setAttributeNode(attrLoop);
+
+          var elSource = document.createElement('source');
+          var attrSrc = document.createAttribute('src');
+
+          attrSrc.value = './public/videos/wos-video-muted-compressed.mp4';
+          elSource.setAttributeNode(attrSrc);
+
+          elVideo.appendChild(elSource)
+
+          document.getElementById('container').appendChild(elVideo);
+        }
+
+        renderVideo();
+
         $( '.loader-layer2' ).animate({
-          width: '50vw'
-        }, 1000, function() {
+          width: (window.innerWidth / 2) + 'px'
+        }, 500, function() {
+
+          renderContent();
+
           $( '.loader' ).animate({
             opacity: 0
           }, 500, function() {
@@ -83,7 +113,8 @@
     </div>
 
     <nav class="container-nav">
-      <a class="container-nav-dot" id="dot-header" href="#anchor-header"></a>
+      <a class="container-nav-dot" id="dot-header" href="#anchor-header"
+        style="box-shadow: rgb(255, 255, 255) 0px 0px 0px 8px inset;"></a>
       <a class="container-nav-dot" id="dot-overview" href="#anchor-overview"></a>
       <a class="container-nav-dot" id="dot-collection" href="#anchor-collection"></a>
       <a class="container-nav-dot" id="dot-muses" href="#anchor-muses"></a>

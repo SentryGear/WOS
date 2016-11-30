@@ -193,30 +193,6 @@ function renderContent() {
     }
   });
 
-  function renderVideo() {
-    var elVideo = document.createElement('video');
-    var attrClass = document.createAttribute('class');
-    var attrAutoplay = document.createAttribute('autoplay');
-    var attrLoop = document.createAttribute('loop');
-
-    attrClass.value = 'container-video';
-    elVideo.setAttributeNode(attrClass);
-    elVideo.setAttributeNode(attrAutoplay);
-    elVideo.setAttributeNode(attrLoop);
-
-    var elSource = document.createElement('source');
-    var attrSrc = document.createAttribute('src');
-
-    attrSrc.value = './public/videos/wos-video-muted-compressed.mp4';
-    elSource.setAttributeNode(attrSrc);
-
-    elVideo.appendChild(elSource)
-
-    document.getElementById('container').appendChild(elVideo);
-  }
-
-  renderVideo();
-
   var body = document.body,
       html = document.documentElement;
 
