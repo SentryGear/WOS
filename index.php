@@ -54,21 +54,18 @@
 
       var progress = setInterval(incrementLoader, 1000);
 
-      $( window ).on('load', function () {
+      window.onload = function(){
         clearInterval(progress);
 
         function renderVideo() {
           var elVideo = document.createElement('video');
           var attrClass = document.createAttribute('class');
-          // var attrPoster = document.createAttribute('poster');
           var attrAutoplay = document.createAttribute('autoplay');
           var attrLoop = document.createAttribute('loop');
 
           attrClass.value = 'container-video';
-          // attrPoster.value = './public/images/video-poster.jpg';
 
           elVideo.setAttributeNode(attrClass);
-          // elVideo.setAttributeNode(attrPoster);
           elVideo.setAttributeNode(attrAutoplay);
           elVideo.setAttributeNode(attrLoop);
 
@@ -97,7 +94,7 @@
             loadStatus = true;
           });
         });
-      });
+      };
     };
   </script>
 </head>
